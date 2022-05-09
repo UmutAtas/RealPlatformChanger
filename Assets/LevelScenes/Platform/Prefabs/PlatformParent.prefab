@@ -47,9 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformList:
-  - {fileID: 5635535229436050815}
-  - {fileID: 8266271534179909171}
-  - {fileID: 5603661033469002632}
+  - {fileID: 1747901310767804213}
+  - {fileID: 3987559867648124098}
+  - {fileID: 9099785139680035657}
 --- !u!1 &3947529991056850780
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +158,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _platformController: {fileID: 4156812464863706180}
+  leftPosition: {x: -6, y: -2, z: 0}
+  midPosition: {x: 0, y: 0, z: 0}
+  rightPosition: {x: 6, y: -2, z: 0}
+  lowerPosition: {x: 0, y: -4, z: 0}
+  leftScale: {x: 2.5, y: 1, z: 5}
+  midScale: {x: 5, y: 1, z: 10}
+  rightScale: {x: 2.5, y: 1, z: 5}
+  moveTime: 1
+  nextMoveTime: 1
+  pState: 1
 --- !u!1 &6934090927619961670
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,7 +276,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _platformController: {fileID: 4156812464863706180}
+  leftPosition: {x: -6, y: -2, z: 0}
+  midPosition: {x: 0, y: 0, z: 0}
+  rightPosition: {x: 6, y: -2, z: 0}
+  lowerPosition: {x: 0, y: -4, z: 0}
+  leftScale: {x: 2.5, y: 1, z: 5}
+  midScale: {x: 5, y: 1, z: 10}
+  rightScale: {x: 2.5, y: 1, z: 5}
+  moveTime: 1
+  nextMoveTime: 1
+  pState: 2
 --- !u!1 &8938158947299106432
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,4 +394,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _platformController: {fileID: 4156812464863706180}
+  leftPosition: {x: -6, y: -2, z: 0}
+  midPosition: {x: 0, y: 0, z: 0}
+  rightPosition: {x: 6, y: -2, z: 0}
+  lowerPosition: {x: 0, y: -4, z: 0}
+  leftScale: {x: 2.5, y: 1, z: 5}
+  midScale: {x: 5, y: 1, z: 10}
+  rightScale: {x: 2.5, y: 1, z: 5}
+  moveTime: 1
+  nextMoveTime: 1
+  pState: 0
