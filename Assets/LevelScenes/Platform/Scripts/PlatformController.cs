@@ -5,6 +5,16 @@ using UnityEngine;
 
 public class PlatformController : MonoBehaviour
 {
+    public Vector3 leftPosition;
+    public Vector3 midPosition;
+    public Vector3 rightPosition;
+    
+    public Vector3 leftScale;
+    public Vector3 midScale;
+    
+    public float moveTime = 1f;
+    public float nextMoveTime = 1f;
+    
     [SerializeField] private List<PlatformMover> platformList = new List<PlatformMover>();
 
     private bool isTap;

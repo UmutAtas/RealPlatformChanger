@@ -8,17 +8,29 @@ using MoreMountains.Tools;
 
 public class PlatformMover : MonoBehaviour
 {
-    [SerializeField] private Vector3 leftPosition;
-    [SerializeField] private Vector3 midPosition;
-    [SerializeField] private Vector3 rightPosition;
+    private Vector3 leftPosition;
+    private Vector3 midPosition;
+    private Vector3 rightPosition;
 
-    [SerializeField] private Vector3 leftScale;
-    [SerializeField] private Vector3 midScale;
+    private Vector3 leftScale;
+    private Vector3 midScale;
 
-    [SerializeField] private float moveTime = 1f;
-    [SerializeField] private float nextMoveTime = 1f;
+    private float moveTime = 1f;
+    private float nextMoveTime = 1f;
+    [SerializeField] private PlatformController _platformController;
     
     public PlatformController.PlatformState pState;
+
+    private void Awake()
+    {
+        leftPosition = _platformController.leftPosition;
+        midPosition = _platformController.midPosition;
+        rightPosition = _platformController.rightPosition;
+        leftScale = _platformController.leftScale;
+        midScale = _platformController.midScale;
+        moveTime = _platformController.moveTime;
+        nextMoveTime = _platformController.nextMoveTime;
+    }
 
     public void MoveLeft()
     {
