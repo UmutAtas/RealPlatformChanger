@@ -17,7 +17,7 @@ public class PlatformController : MonoBehaviour
     
     [SerializeField] private List<PlatformMover> platformList = new List<PlatformMover>();
 
-    private bool isTap;
+    public bool isTap;
     public enum PlatformState
     {
         right,
@@ -25,19 +25,24 @@ public class PlatformController : MonoBehaviour
         left,
     }
 
+    private void Update()
+    {
+        LockPlatformPosition();
+    }
+
     private void FixedUpdate()
     {
-        MovePlatforms();
+        if (!isTap)
+        {
+            MovePlatforms();
+        }
     }
 
     private void MovePlatforms()
     {
-        if (!isTap)
+        foreach (var platform in platformList)
         {
-            foreach (var platform in platformList)
-            {
-                platform.MoveAll();
-            }
+            platform.MoveAll();
         }
     }
 
@@ -46,6 +51,11 @@ public class PlatformController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isTap = true;
+            MovePlatforms();
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            isTap = false;
         }
     }
 
