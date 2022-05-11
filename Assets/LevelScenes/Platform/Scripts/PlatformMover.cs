@@ -78,5 +78,4 @@ public class PlatformMover : MonoBehaviour
         yield return new WaitForSeconds(nextMoveTime);
         pState = statePosition;
     }
-    
 }

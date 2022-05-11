@@ -16,8 +16,10 @@ public class PlatformController : MonoBehaviour
     public float nextMoveTime = 1f;
     
     [SerializeField] private List<PlatformMover> platformList = new List<PlatformMover>();
+    [SerializeField] private Transform allPlatforms;
 
-    public bool isTap;
+    private bool isTap;
+    private bool canMove;
     public enum PlatformState
     {
         right,
@@ -32,7 +34,7 @@ public class PlatformController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isTap)
+        if (!isTap)//canMove ekle
         {
             MovePlatforms();
         }
