@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4197752924765313706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8144518277372595361}
   - {fileID: 2429307427062600821}
@@ -49,15 +49,17 @@ MonoBehaviour:
   leftPosition: {x: -2, y: -2, z: 0}
   midPosition: {x: 0, y: 0, z: 0}
   rightPosition: {x: 2, y: -2, z: 0}
-  leftScale: {x: 2.5, y: 2, z: 5}
-  midScale: {x: 5, y: 2, z: 10}
+  leftScale: {x: 2.5, y: 5, z: 5}
+  midScale: {x: 5, y: 5, z: 10}
   moveTime: 1
   nextMoveTime: 1
+  platformMoveDelayTime: 1
   platformList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6026102104337747143}
+  - {fileID: 7322243761239332539}
   - {fileID: 464473771698098817}
   allPlatforms: {fileID: 0}
+  canMove: 0
 --- !u!1 &7106562586377343292
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +74,7 @@ GameObject:
   - component: {fileID: 3866277640405842021}
   - component: {fileID: 5540718858250736669}
   - component: {fileID: 7322243761239332539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 0
+  underPlayer: 0
 --- !u!1 &9214650504222931179
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ GameObject:
   - component: {fileID: 3677653123045487884}
   - component: {fileID: 988249605054070985}
   - component: {fileID: 6026102104337747143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 2
+  underPlayer: 0
 --- !u!1001 &483887955307197178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,10 +322,14 @@ PrefabInstance:
     - target: {fileID: 2640197623923000807, guid: dab902d6aa5589c4298f1dd99e57e624, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6fc74a4bac6a4944f94fb4a702d6fe10, type: 2}
+      objectReference: {fileID: 2100000, guid: f0b986508d22575439bc439c3100240b, type: 2}
     - target: {fileID: 4021090629002700774, guid: dab902d6aa5589c4298f1dd99e57e624, type: 3}
       propertyPath: m_Name
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021090629002700774, guid: dab902d6aa5589c4298f1dd99e57e624, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8624456718020296283, guid: dab902d6aa5589c4298f1dd99e57e624, type: 3}
       propertyPath: m_RootOrder
@@ -432,3 +440,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 1
+  underPlayer: 0

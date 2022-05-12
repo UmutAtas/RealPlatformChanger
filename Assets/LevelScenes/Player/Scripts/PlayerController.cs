@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Animator playerAnimator;
+
+    private void Update()
     {
-        
+        MovePlayerAnimation();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void MovePlayerAnimation()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerAnimator.SetBool("isTap", true);
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            playerAnimator.SetBool("isTap", false);
+        }
     }
 }

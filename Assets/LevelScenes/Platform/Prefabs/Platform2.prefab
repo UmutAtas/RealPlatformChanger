@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3348006601065382491}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.000000029802322, y: 9.991238, z: 14.575916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -53,11 +53,13 @@ MonoBehaviour:
   midScale: {x: 5, y: 5, z: 10}
   moveTime: 1
   nextMoveTime: 1
+  platformMoveDelayTime: 1
   platformList:
   - {fileID: 5158569525961888822}
   - {fileID: 8190426695600803402}
   - {fileID: 7455899558502237419}
   allPlatforms: {fileID: 0}
+  canMove: 0
 --- !u!1 &7770657173415190554
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,7 +74,7 @@ GameObject:
   - component: {fileID: 2827783719315533309}
   - component: {fileID: 1837784822521468984}
   - component: {fileID: 5158569525961888822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 3803020643220479527}
   pState: 2
+  underPlayer: 0
 --- !u!1 &8550221664817662413
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +200,7 @@ GameObject:
   - component: {fileID: 2418485017089466516}
   - component: {fileID: 6400598285933071596}
   - component: {fileID: 8190426695600803402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 3803020643220479527}
   pState: 0
+  underPlayer: 0
 --- !u!1001 &7555192532701454688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -318,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 2447568857308405422, guid: feea91469cb832340a30ce4ab619c407, type: 3}
       propertyPath: m_Name
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2447568857308405422, guid: feea91469cb832340a30ce4ab619c407, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3079426701346554900, guid: feea91469cb832340a30ce4ab619c407, type: 3}
       propertyPath: m_RootOrder
@@ -389,3 +397,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 3803020643220479527}
   pState: 1
+  underPlayer: 0

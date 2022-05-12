@@ -19,7 +19,7 @@ public class PlatformMover : MonoBehaviour
     [SerializeField] private PlatformController _platformController;
     
     public PlatformController.PlatformState pState;
-
+    
     private void Awake()
     {
         leftPosition = _platformController.leftPosition;
@@ -72,10 +72,26 @@ public class PlatformMover : MonoBehaviour
                 break;
         }
     }
-
+    
     public IEnumerator ChangeState(PlatformController.PlatformState statePosition)
     {
         yield return new WaitForSeconds(nextMoveTime);
         pState = statePosition;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 3)
+        {
+            _platformController.underPlayer = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.layer == 3)
+        {
+            _platformController.underPlayer = false;
+        }
     }
 }
