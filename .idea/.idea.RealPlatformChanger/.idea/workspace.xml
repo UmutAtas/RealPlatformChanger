@@ -17,6 +17,7 @@
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/Managers/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../PlatformChanger/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.11/Runtime/Behaviours/CinemachineDollyCart.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -25,6 +26,7 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.11/Runtime/Behaviours/CinemachineDollyCart.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="28qK24a42l6S4a40xLfQebSKrY3" />
@@ -76,6 +78,7 @@
       <workItem from="1652262086024" duration="3314000" />
       <workItem from="1652284040722" duration="965000" />
       <workItem from="1652352567018" duration="11683000" />
+      <workItem from="1652447160553" duration="5346000" />
     </task>
     <servers />
   </component>

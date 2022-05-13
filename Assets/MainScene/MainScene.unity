@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
+    agentRadius: 0.1
+    agentHeight: 0.97
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.14
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.033333335
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -2083,6 +2083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Generic_CloudRing_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1412538713465552, guid: f30f3582a5b3d7a4cbb518016d77750b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4371030477982826, guid: f30f3582a5b3d7a4cbb518016d77750b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2125,6 +2129,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4371030477982826, guid: f30f3582a5b3d7a4cbb518016d77750b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23210301221681362, guid: f30f3582a5b3d7a4cbb518016d77750b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
