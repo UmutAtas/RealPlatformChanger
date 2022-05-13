@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ca3f4f074e7fca47b0bb2c804056a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPosition: {x: -2, y: -2, z: 0}
+  leftPosition: {x: -2, y: -1, z: 0}
   midPosition: {x: 0, y: 0, z: 0}
-  rightPosition: {x: 2, y: -2, z: 0}
+  rightPosition: {x: 2, y: -1, z: 0}
   leftScale: {x: 2.5, y: 5, z: 5}
   midScale: {x: 5, y: 5, z: 10}
   moveTime: 1
@@ -60,6 +60,7 @@ MonoBehaviour:
   - {fileID: 464473771698098817}
   allPlatforms: {fileID: 0}
   canMove: 0
+  underPlayer: 0
 --- !u!1 &7106562586377343292
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 0
-  underPlayer: 0
 --- !u!1 &9214650504222931179
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 2
-  underPlayer: 0
 --- !u!1001 &483887955307197178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -440,4 +439,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 2373647041822082774}
   pState: 1
-  underPlayer: 0
