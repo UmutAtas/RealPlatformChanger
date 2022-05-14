@@ -22,13 +22,16 @@ public class PlatformMover : MonoBehaviour
     
     private void Awake()
     {
-        leftPosition = _platformController.leftPosition;
-        midPosition = _platformController.midPosition;
-        rightPosition = _platformController.rightPosition;
-        leftScale = _platformController.leftScale;
-        midScale = _platformController.midScale;
-        moveTime = _platformController.moveTime;
-        nextMoveTime = _platformController.nextMoveTime;
+        if (_platformController != null)
+        {
+            leftPosition = _platformController.leftPosition;
+            midPosition = _platformController.midPosition;
+            rightPosition = _platformController.rightPosition;
+            leftScale = _platformController.leftScale;
+            midScale = _platformController.midScale;
+            moveTime = _platformController.moveTime;
+            nextMoveTime = _platformController.nextMoveTime;
+        }
     }
 
     public void MoveLeft()
@@ -83,7 +86,10 @@ public class PlatformMover : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            _platformController.underPlayer = true;
+            if (_platformController != null)
+            {
+                _platformController.underPlayer = true;
+            }
         }
     }
 
@@ -91,7 +97,10 @@ public class PlatformMover : MonoBehaviour
     {
         if (other.gameObject.layer == 3)
         {
-            _platformController.underPlayer = false;
+            if (_platformController != null)
+            {
+                _platformController.underPlayer = false;
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4255730700474270981}
   - component: {fileID: 7717209949948116473}
   - component: {fileID: 4407527017217678574}
-  - component: {fileID: 2294285568213110885}
+  - component: {fileID: 745976319830411245}
   - component: {fileID: 7000577123458864333}
   - component: {fileID: 5410524265592923505}
   m_Layer: 7
@@ -96,9 +96,9 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.20000003, y: 0.0763487, z: 0.7232077}
+  m_Size: {x: 0.20000003, y: 0.12, z: 0.7232077}
   m_Center: {x: 0.000000007450581, y: 0.025401833, z: 0}
---- !u!64 &2294285568213110885
+--- !u!64 &745976319830411245
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5053925668127403250, guid: 05d97b7f55edda44db128c8cbb3d66d1, type: 3}
+  m_Mesh: {fileID: -5053925668127403250, guid: 6a7015b457365854f9596355bd58e30e, type: 3}
 --- !u!114 &7000577123458864333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,19 +131,19 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: -0.03604333, z: -0.36}
+  - position: {x: 0, y: 0.01454275, z: -0.36000004}
     roll: 0
-  - position: {x: 0, y: -0.034762844, z: -0.15}
+  - position: {x: 0, y: 0.014830569, z: -0.15}
     roll: 0
-  - position: {x: 0, y: -0.004253119, z: -0.08}
+  - position: {x: 0, y: 0.048895054, z: -0.07999993}
     roll: 0
-  - position: {x: 0, y: 0.013072431, z: -0.00999999}
+  - position: {x: 0, y: 0.062714174, z: -0.010000043}
     roll: 0
-  - position: {x: 0, y: -0.0039290786, z: 0.06888162}
+  - position: {x: 0, y: 0.053512745, z: 0.0688816}
     roll: 0
-  - position: {x: 0, y: -0.03854298, z: 0.14776324}
+  - position: {x: 0, y: 0.018144969, z: 0.14776325}
     roll: 0
-  - position: {x: 0, y: -0.041070953, z: 0.35721812}
+  - position: {x: 0, y: 0.013911608, z: 0.35721818}
     roll: 0
 --- !u!114 &5410524265592923505
 MonoBehaviour:

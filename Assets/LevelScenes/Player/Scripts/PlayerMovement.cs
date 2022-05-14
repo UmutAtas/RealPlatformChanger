@@ -82,30 +82,33 @@ public class PlayerMovement : MonoBehaviour
     //        StopAllCoroutines();
     //    }
     //}
-    private float Stamina,Decrease,Increase,Speed,DecreaseSpeed,BaseSpeed,DecreaseSpeedThreshold;
+    [SerializeField] private float Stamina,Decrease,Increase,Speed,DecreaseSpeed,BaseSpeed,DecreaseSpeedThreshold;
     
     void Start()
     {
         BaseSpeed = Speed;
     }
 
-    
     void Update()
     {
+        print(Stamina);
+        print(Speed);
         GetColored();
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
             PressDown();
-        if(Input.GetMouseButtonUp(0))
-            PressUp();
+        //if(Input.GetMouseButtonUp(0))
+           // PressUp();
     }
 
     void PressDown()
     {
-        transform.position = Vector3.Lerp(transform.position,transform.forward,Speed* Time.deltaTime);
         Stamina -= Time.deltaTime * Decrease;
         if (Stamina <= 75)
         {
-            Speed -= Time.deltaTime * DecreaseSpeed;
+            if (Speed > DecreaseSpeedThreshold)
+            {
+                Speed -= Time.deltaTime * DecreaseSpeed;
+            }
         }
         else if(Stamina <= 0)
             Lose();
@@ -121,10 +124,13 @@ public class PlayerMovement : MonoBehaviour
     }
     void PressUp()
     {
-        Stamina += Time.deltaTime * Increase;
-        if (Stamina >= 75)
-            Speed = BaseSpeed;
-        else if(Stamina <= 75)
-            Speed += Time.deltaTime * DecreaseSpeed;
+        while (Stamina <= 100)
+        {
+            Stamina += Time.deltaTime * Increase;
+            if (Stamina >= 75)
+                Speed = BaseSpeed;
+            else if(Stamina <= 75 && Speed <= BaseSpeed)
+                Speed += Time.deltaTime * DecreaseSpeed;
+        }
     }
 }

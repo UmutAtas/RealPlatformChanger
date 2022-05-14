@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 3016891663854685322}
+  _dollyCart: {fileID: 0}
 --- !u!1001 &8697773945499545883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,8 +336,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1273663
-  m_Height: 0.64
+  m_Radius: 0.135
+  m_Height: 0.7
   m_Direction: 1
   m_Center: {x: -0.007847786, y: 0.2851737, z: 0.05873966}
 --- !u!114 &1185691369
@@ -351,9 +352,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa7df3198927d74e988e0bb91705e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runTime: 3
-  slowDownTime: 1
-  movementSpeed: 2
-  slowDownSpeed: 0.02
-  canSlowDown: 0
-  canTired: 0
+--- !u!114 &9119207349819298326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391853740913118282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ee44d41ce60f145a8b6f8ade799b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dollyCart: {fileID: 0}
