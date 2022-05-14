@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3258050013051519477}
   - component: {fileID: 1944114202244930409}
   - component: {fileID: 2402151253946709150}
+  - component: {fileID: -8798686546490741583}
   m_Layer: 7
   m_Name: StraightPlatform
   m_TagString: Untagged
@@ -134,3 +135,17 @@ MonoBehaviour:
     roll: 0
   - position: {x: 0, y: 0.018912729, z: 0.361051}
     roll: 0
+--- !u!114 &-8798686546490741583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2447568857308405422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platformController: {fileID: 0}
+  pState: 0

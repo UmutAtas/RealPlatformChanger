@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4407527017217678574}
   - component: {fileID: 2294285568213110885}
   - component: {fileID: 7000577123458864333}
+  - component: {fileID: 5410524265592923505}
   m_Layer: 7
   m_Name: UpwardSlopePlatform
   m_TagString: Untagged
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6161333748747341277}
-  m_Mesh: {fileID: -5053925668127403250, guid: 05d97b7f55edda44db128c8cbb3d66d1, type: 3}
+  m_Mesh: {fileID: -5053925668127403250, guid: 6a7015b457365854f9596355bd58e30e, type: 3}
 --- !u!23 &7717209949948116473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95,8 +96,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.20000003, y: 0.07634869, z: 0.7232077}
-  m_Center: {x: 0.000000007450581, y: -0.02523118, z: 0}
+  m_Size: {x: 0.20000003, y: 0.0763487, z: 0.7232077}
+  m_Center: {x: 0.000000007450581, y: 0.025401833, z: 0}
 --- !u!64 &2294285568213110885
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -144,3 +145,17 @@ MonoBehaviour:
     roll: 0
   - position: {x: 0, y: -0.041070953, z: 0.35721812}
     roll: 0
+--- !u!114 &5410524265592923505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6161333748747341277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platformController: {fileID: 0}
+  pState: 0

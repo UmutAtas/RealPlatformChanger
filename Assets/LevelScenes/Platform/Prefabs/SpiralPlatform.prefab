@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5711160533117180853}
   - component: {fileID: 1801420231949864471}
   - component: {fileID: 5896230868529779924}
+  - component: {fileID: 607322296318625789}
   m_Layer: 7
   m_Name: SpiralPlatform
   m_TagString: Untagged
@@ -142,3 +143,17 @@ MonoBehaviour:
     roll: 0
   - position: {x: 0, y: 0, z: 0.37}
     roll: 0
+--- !u!114 &607322296318625789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021090629002700774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platformController: {fileID: 0}
+  pState: 0

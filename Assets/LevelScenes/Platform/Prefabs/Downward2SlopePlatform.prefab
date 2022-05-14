@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7843816503927927038}
   - component: {fileID: 6329379674788314087}
   - component: {fileID: 2312242655460321669}
+  - component: {fileID: 2908322479412296872}
   m_Layer: 7
   m_Name: Downward2SlopePlatform
   m_TagString: Untagged
@@ -156,3 +157,17 @@ MonoBehaviour:
     roll: 0
   - position: {x: 0, y: 0.0160716, z: 0.36296093}
     roll: 0
+--- !u!114 &2908322479412296872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288164533137475562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb114fbec22bb14bac6b445466e67f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _platformController: {fileID: 0}
+  pState: 0
