@@ -323,12 +323,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1050520677854395148, guid: d69ae461adb33aa4d91bf2ebf412f8e1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1050520677854395148, guid: d69ae461adb33aa4d91bf2ebf412f8e1, type: 3}
       propertyPath: m_Center.y
-      value: -0.025694504
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1050520677854395148, guid: d69ae461adb33aa4d91bf2ebf412f8e1, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3549741776946427854, guid: d69ae461adb33aa4d91bf2ebf412f8e1, type: 3}
       propertyPath: m_Materials.Array.data[0]
