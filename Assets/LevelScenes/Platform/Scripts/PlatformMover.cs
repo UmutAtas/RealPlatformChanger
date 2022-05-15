@@ -89,6 +89,7 @@ public class PlatformMover : MonoBehaviour
             if (_platformController != null)
             {
                 _platformController.underPlayer = true;
+                _platformController.transform.SetParent(_platformController.oldPlatforms);
             }
         }
     }

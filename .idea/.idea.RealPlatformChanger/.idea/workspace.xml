@@ -23,12 +23,12 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMoveDelay.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.11/Runtime/Behaviours/CinemachineDollyCart.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="28qK24a42l6S4a40xLfQebSKrY3" />
@@ -82,6 +82,7 @@
       <workItem from="1652352567018" duration="11683000" />
       <workItem from="1652447160553" duration="5347000" />
       <workItem from="1652527799028" duration="7517000" />
+      <workItem from="1652614926604" duration="1414000" />
     </task>
     <servers />
   </component>

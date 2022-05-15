@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerPathFind : MonoBehaviour
@@ -17,6 +18,12 @@ public class PlayerPathFind : MonoBehaviour
             {
                 if (_dollyCart.m_Path != path)
                 {
+                    //_dollyCart.transform.DOMove(path.m_Waypoints[0].position, 0.2f).OnComplete(() =>
+                    //{
+                    //    _dollyCart.m_Path = path;
+                    //    _dollyCart.m_Position = 0f;
+                    //    print("girdi2");
+                    //});
                     _dollyCart.m_Path = path;
                     _dollyCart.m_Position = 0f;
                     print("girdi2");

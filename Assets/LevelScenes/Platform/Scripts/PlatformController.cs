@@ -18,6 +18,7 @@ public class PlatformController : MonoBehaviour
 
     [SerializeField] private List<PlatformMover> platformList = new List<PlatformMover>();
     [SerializeField] private Transform allPlatforms;
+    public Transform oldPlatforms;
 
     private bool isTap;
     public bool canMove;
