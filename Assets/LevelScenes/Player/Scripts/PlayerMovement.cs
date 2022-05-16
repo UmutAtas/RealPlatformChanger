@@ -82,35 +82,47 @@ public class PlayerMovement : MonoBehaviour
     //        StopAllCoroutines();
     //    }
     //}
-    [SerializeField] private float Stamina,Decrease,Increase,Speed,DecreaseSpeed,BaseSpeed,DecreaseSpeedThreshold;
-    
-    void Start()
+    [SerializeField] private float stamina,
+        decreaseStamina,
+        increaseStamina,
+        speed,
+        decreaseSpeed,
+        increaseSpeed,
+        baseSpeed,
+        decreaseSpeedThreshold,
+        maxStamina;
+    private bool _running = false;
+
+    void Awake()
     {
-        BaseSpeed = Speed;
+        baseSpeed = speed;
+        maxStamina = stamina;
     }
 
     void Update()
     {
-        print(Stamina);
-        print(Speed);
-        GetColored();
+        print(stamina);
+        print(speed); 
+        if (Input.GetMouseButtonDown(0))
+            _running = true;
         if(Input.GetMouseButton(0))
             PressDown();
-        //if(Input.GetMouseButtonUp(0))
-           // PressUp();
+        if (Input.GetMouseButtonUp(0))
+            _running = false;
+        PressUp();
     }
 
     void PressDown()
     {
-        Stamina -= Time.deltaTime * Decrease;
-        if (Stamina <= 75)
+        stamina -= Time.deltaTime * decreaseStamina;
+        if (stamina <= decreaseSpeedThreshold)
         {
-            if (Speed > DecreaseSpeedThreshold)
+            if (speed > 0)
             {
-                Speed -= Time.deltaTime * DecreaseSpeed;
+                speed -= Time.deltaTime * decreaseSpeed;
             }
         }
-        else if(Stamina <= 0)
+        else if(stamina <= 0)
             Lose();
     }
 
@@ -120,17 +132,17 @@ public class PlayerMovement : MonoBehaviour
     }
     void GetColored()
     {
-        float AplhaRange = Stamina;
+        float AplhaRange = stamina;
     }
     void PressUp()
     {
-        while (Stamina <= 100)
+        if (!_running && stamina <=maxStamina)
         {
-            Stamina += Time.deltaTime * Increase;
-            if (Stamina >= 75)
-                Speed = BaseSpeed;
-            else if(Stamina <= 75 && Speed <= BaseSpeed)
-                Speed += Time.deltaTime * DecreaseSpeed;
+            stamina += Time.deltaTime * increaseStamina;
+            if (stamina >= 75)
+                speed = baseSpeed;
+            else if (stamina <= 75 && speed <= baseSpeed)
+                speed += Time.deltaTime * increaseSpeed;
         }
     }
 }

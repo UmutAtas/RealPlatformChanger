@@ -785,6 +785,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: stamina
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: decreaseSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: increaseSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: decreaseStamina
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: increaseStamina
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: decreaseSpeedThreshold
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890309, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_Name
       value: PlayerPath
