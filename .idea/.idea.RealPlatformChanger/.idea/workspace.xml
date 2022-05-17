@@ -27,8 +27,8 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="28qK24a42l6S4a40xLfQebSKrY3" />

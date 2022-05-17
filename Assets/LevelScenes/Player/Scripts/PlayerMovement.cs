@@ -138,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         if (!_running && stamina <=maxStamina)
         {
             stamina += Time.deltaTime * increaseStamina;
-            if (stamina >= 75)
+            if (stamina >= decreaseSpeedThreshold)
                 speed = baseSpeed;
             else if (stamina <= 75 && speed <= baseSpeed)
                 speed += Time.deltaTime * increaseSpeed;
