@@ -85,12 +85,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float stamina,
         decreaseStamina,
         increaseStamina,
-        speed,
         decreaseSpeed,
         increaseSpeed,
         baseSpeed,
         decreaseSpeedThreshold,
         maxStamina;
+
+    public float speed;
     private bool _running = false;
 
     void Awake()
@@ -101,8 +102,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        print(stamina);
-        print(speed); 
         if (Input.GetMouseButtonDown(0))
             _running = true;
         if(Input.GetMouseButton(0))

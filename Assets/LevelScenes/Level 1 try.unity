@@ -361,6 +361,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3079426701346554900, guid: feea91469cb832340a30ce4ab619c407, type: 3}
   m_PrefabInstance: {fileID: 1983791080}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &995818041 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+  m_PrefabInstance: {fileID: 4982050697444924634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa7df3198927d74e988e0bb91705e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053927300
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +800,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 736916748169834969, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: _playerMovement
+      value: 
+      objectReference: {fileID: 995818041}
     - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: speed
       value: 3

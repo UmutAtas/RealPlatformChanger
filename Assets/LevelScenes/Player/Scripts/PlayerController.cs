@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private CinemachineDollyCart _dollyCart;
+    [SerializeField] private PlayerMovement _playerMovement;
 
     private void Start()
     {
@@ -17,6 +18,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         MovePlayerAnimation();
+        SetPlayerSpeed();
+    }
+
+    private void SetPlayerSpeed()
+    {
+        _dollyCart.m_Speed = _playerMovement.speed;
     }
 
     private void MovePlayerAnimation()
