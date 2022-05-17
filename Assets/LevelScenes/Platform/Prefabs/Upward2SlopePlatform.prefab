@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8161574930232448332}
   - component: {fileID: 6318505799640870273}
   - component: {fileID: 6319986215031862892}
-  - component: {fileID: 8014891525455902311}
   - component: {fileID: 6797396192242851467}
   - component: {fileID: 7195027337386699815}
+  - component: {fileID: 9157429411204845234}
   m_Layer: 7
   m_Name: Upward2SlopePlatform
   m_TagString: Untagged
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8337487744352651562}
-  m_Mesh: {fileID: -2228417370725966487, guid: 05d97b7f55edda44db128c8cbb3d66d1, type: 3}
+  m_Mesh: {fileID: -2228417370725966487, guid: 7992831c00f37c742a3133a67269a8aa, type: 3}
 --- !u!23 &6318505799640870273
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,20 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.20000003, y: 0.08577441, z: 0.728796}
   m_Center: {x: 0, y: 0.01007604, z: 0}
---- !u!64 &8014891525455902311
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8337487744352651562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2228417370725966487, guid: 05d97b7f55edda44db128c8cbb3d66d1, type: 3}
 --- !u!114 &6797396192242851467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +157,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 0}
   pState: 0
+--- !u!64 &9157429411204845234
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8337487744352651562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2228417370725966487, guid: 7992831c00f37c742a3133a67269a8aa, type: 3}
