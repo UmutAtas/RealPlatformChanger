@@ -361,17 +361,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3079426701346554900, guid: feea91469cb832340a30ce4ab619c407, type: 3}
   m_PrefabInstance: {fileID: 1983791080}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &995818041 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-  m_PrefabInstance: {fileID: 4982050697444924634}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fa7df3198927d74e988e0bb91705e6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1053927300
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,37 +819,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 736916748169834969, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: _playerMovement
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneyAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneyParent
       value: 
-      objectReference: {fileID: 995818041}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: speed
-      value: 3
+      objectReference: {fileID: 1261785040}
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneySpawnDistance
+      value: 0.35
       objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: stamina
-      value: 100
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneySpawnOffset.x
+      value: 0.17
       objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: decreaseSpeed
-      value: 1
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneySpawnOffset.y
+      value: 0.45
       objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: increaseSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: decreaseStamina
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: increaseStamina
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4438156578855129410, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: decreaseSpeedThreshold
-      value: 75
+    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: moneySpawnOffset.z
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890309, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_Name
@@ -880,7 +861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890363, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.386
+      value: -10.93
       objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890363, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_LocalRotation.w

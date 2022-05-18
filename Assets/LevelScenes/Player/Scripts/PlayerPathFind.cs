@@ -26,7 +26,6 @@ public class PlayerPathFind : MonoBehaviour
                     //});
                     _dollyCart.m_Path = path;
                     _dollyCart.m_Position = 0f;
-                    print("girdi2");
                 }
             }
         }

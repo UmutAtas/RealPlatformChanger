@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         maxStamina;
 
     public float speed;
-    private bool _running = false;
+    private bool _running;
 
     void Awake()
     {
@@ -117,12 +117,10 @@ public class PlayerMovement : MonoBehaviour
         if (stamina <= decreaseSpeedThreshold)
         {
             if (speed > 0)
-            {
                 speed -= Time.deltaTime * decreaseSpeed;
-            }
+            if (stamina <= 0)
+                Lose();
         }
-        else if(stamina <= 0)
-            Lose();
     }
 
     void Lose()
