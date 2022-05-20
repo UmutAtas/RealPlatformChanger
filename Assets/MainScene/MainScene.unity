@@ -1464,7 +1464,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 814712606}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 911063981}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: StaminaUpgradeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &814712606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,6 +1695,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountDown: 2
   taptic: 1
+  moneyAmount: 1
+  stamina: 100
+  speed: 3
+  newMoneyAmount: 2
+  newSpeed: 0.5
+  newStamina: 12
   _gamestate: 0
 --- !u!4 &911063982
 Transform:
@@ -1916,7 +1934,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 981775694}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 911063981}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MoneyUpgradeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &981775694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3779,7 +3809,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2081003062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 911063981}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: SpeedUpgradeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2081003062
 MonoBehaviour:
   m_ObjectHideFlags: 0

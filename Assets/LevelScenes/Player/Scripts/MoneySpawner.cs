@@ -11,9 +11,6 @@ public class MoneySpawner : MonoBehaviour
     [SerializeField] private GameObject particleToSpawn;
     [SerializeField] private Vector3 moneySpawnOffset;
     [SerializeField] private Transform moneyParent;
-
-    [SerializeField] private int moneyAmount;
-
     private void Awake()
     {
         _position = transform.position.z;
@@ -34,7 +31,7 @@ public class MoneySpawner : MonoBehaviour
             Instantiate(particleToSpawn, transform.position + moneySpawnOffset, Quaternion.identity, moneyParent);
             _currentDistance = 0f;
             _position = currentPos;
-            UIManager.Instance.SetCoin(moneyAmount);
+            UIManager.Instance.SetCoin(GameManager.Instance.moneyAmount);
         }
     }
 }
