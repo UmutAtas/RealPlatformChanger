@@ -8,6 +8,7 @@ using UnityEngine;
 public class PlayerPathFind : MonoBehaviour
 {
     [SerializeField] private CinemachineDollyCart _dollyCart;
+    [SerializeField] private float waitTime;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,14 +19,12 @@ public class PlayerPathFind : MonoBehaviour
             {
                 if (_dollyCart.m_Path != path)
                 {
-                    //_dollyCart.transform.DOMove(path.m_Waypoints[0].position, 0.2f).OnComplete(() =>
-                    //{
-                    //    _dollyCart.m_Path = path;
-                    //    _dollyCart.m_Position = 0f;
-                    //    print("girdi2");
-                    //});
-                    _dollyCart.m_Path = path;
-                    _dollyCart.m_Position = 0f;
+                    var startPos = other.transform.GetChild(0).position;
+                    _dollyCart.transform.DOMove(startPos, waitTime).OnComplete(() =>
+                    {
+                        _dollyCart.m_Path = path;
+                        _dollyCart.m_Position = 0f;
+                    });
                 }
             }
         }
