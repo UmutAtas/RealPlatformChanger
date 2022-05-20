@@ -19,12 +19,14 @@ public class PlayerPathFind : MonoBehaviour
             {
                 if (_dollyCart.m_Path != path)
                 {
-                    var startPos = other.transform.GetChild(0).position;
-                    _dollyCart.transform.DOMove(startPos, waitTime).OnComplete(() =>
-                    {
-                        _dollyCart.m_Path = path;
-                        _dollyCart.m_Position = 0f;
-                    });
+                   //var startPos = other.transform.GetChild(0).position;
+                   //_dollyCart.transform.DOMove(startPos, waitTime).OnComplete(() =>
+                   //{
+                   //    _dollyCart.m_Path = path;
+                   //    _dollyCart.m_Position = 0f;
+                   //});
+                   _dollyCart.m_Path = path;
+                   _dollyCart.m_Position = 0f;
                 }
             }
         }
