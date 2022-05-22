@@ -31,7 +31,7 @@ public class MoneySpawner : MonoBehaviour
             Instantiate(particleToSpawn, transform.position + moneySpawnOffset, Quaternion.identity, moneyParent);
             _currentDistance = 0f;
             _position = currentPos;
-            UIManager.Instance.SetCoin(GameManager.Instance.moneyAmount);
+            UIManager.Instance.SetCoin(UpgradeManager.Instance.moneyAmount);
         }
     }
 }

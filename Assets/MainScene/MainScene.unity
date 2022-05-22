@@ -1465,8 +1465,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911063981}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1784856069}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: StaminaUpgradeButton
         m_Mode: 1
         m_Arguments:
@@ -1695,12 +1695,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountDown: 2
   taptic: 1
-  moneyAmount: 1
-  stamina: 100
-  speed: 3
-  newMoneyAmount: 2
-  newSpeed: 0.5
-  newStamina: 12
   _gamestate: 0
 --- !u!4 &911063982
 Transform:
@@ -1935,8 +1929,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911063981}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1784856069}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: MoneyUpgradeButton
         m_Mode: 1
         m_Arguments:
@@ -2015,6 +2009,7 @@ Transform:
   - {fileID: 911063982}
   - {fileID: 820716390}
   - {fileID: 1145315113}
+  - {fileID: 1784856068}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3124,6 +3119,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775625908}
   m_CullTransparentMesh: 1
+--- !u!1 &1784856067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1784856068}
+  - component: {fileID: 1784856069}
+  m_Layer: 0
+  m_Name: UpgradeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1784856068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784856067}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1079501275}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1784856069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784856067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88f4454447acf5f40b465eb6ce400a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyAmount: 1
+  newMoneyAmount: 2
+  newSpeed: 0.5
+  newStamina: 8
 --- !u!1 &1856172504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,8 +3852,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911063981}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+      - m_Target: {fileID: 1784856069}
+        m_TargetAssemblyTypeName: UpgradeManager, Assembly-CSharp
         m_MethodName: SpeedUpgradeButton
         m_Mode: 1
         m_Arguments:

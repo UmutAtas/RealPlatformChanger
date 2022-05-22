@@ -7,11 +7,6 @@ public class GameManager : Singleton<GameManager>
     int asyncSceneIndex = 1;
     public bool taptic = true;
     
-    public int moneyAmount;
-    public float stamina, speed;
-
-    [SerializeField] private int newMoneyAmount;
-    [SerializeField] private float newSpeed, newStamina;
     #region GameState
     public enum GAMESTATE
     {
@@ -36,17 +31,6 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         Gamestate = GAMESTATE.Start;
-        if (!PlayerPrefs.HasKey("MoneyAmount"))
-            PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
-        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
-        
-        if (!PlayerPrefs.HasKey("Stamina"))
-            PlayerPrefs.SetFloat("Stamina", stamina);
-        stamina = PlayerPrefs.GetFloat("Stamina");
-        
-        if (!PlayerPrefs.HasKey("Speed"))
-            PlayerPrefs.SetFloat("Speed", speed);
-        speed = PlayerPrefs.GetFloat("Speed");
     }
     void Update()
     {
@@ -119,27 +103,6 @@ public class GameManager : Singleton<GameManager>
         CountDown = 2;
     }
 
-    public void MoneyUpgradeButton()
-    {
-        var currentMoney = PlayerPrefs.GetInt("MoneyAmount");
-        PlayerPrefs.SetInt("MoneyAmount", currentMoney + newMoneyAmount);
-        moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
-    }
-    
-    public void StaminaUpgradeButton()
-    {
-        var currentStamina = PlayerPrefs.GetFloat("Stamina");
-        PlayerPrefs.SetFloat("Stamina", currentStamina + newStamina);
-        stamina = PlayerPrefs.GetInt("Stamina");
-    }
-    
-    public void SpeedUpgradeButton()
-    {
-        var currentSpeed = PlayerPrefs.GetFloat("Speed");
-        PlayerPrefs.SetFloat("Speed", currentSpeed + newSpeed);
-        speed = PlayerPrefs.GetInt("Speed");
-    }
-    
     #endregion
     void OnValueChanged()
     {
