@@ -17,8 +17,11 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Update()
     {
-        MovePlayerAnimation();
-        SetDollySpeed();
+        if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
+        {
+            MovePlayerAnimation();
+            SetDollySpeed();
+        }
     }
 
     private void SetDollySpeed()

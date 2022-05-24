@@ -66,7 +66,6 @@ MonoBehaviour:
   particleToSpawn: {fileID: 2332006336939640779, guid: 6ca4c342549aa1e4a9459aae56b239dd, type: 3}
   moneySpawnOffset: {x: 0.27, y: 1.04, z: -1}
   moneyParent: {fileID: 0}
-  moneyAmount: 1
 --- !u!1001 &4438156577753868203
 PrefabInstance:
   m_ObjectHideFlags: 0
