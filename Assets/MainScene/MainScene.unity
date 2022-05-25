@@ -5989,6 +5989,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MoneyUpgradeButton
       objectReference: {fileID: 0}
+    - target: {fileID: 1035646107433746132, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
 --- !u!222 &1474085234643665801
