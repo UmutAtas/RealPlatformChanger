@@ -48,9 +48,9 @@ public class GameManager : Singleton<GameManager>
             case GAMESTATE.GameOver:
                 GameOver();
                 break;
-        }
-        //if (Input.anyKeyDown && Gamestate == GAMESTATE.Start)
-           // Gamestate = GAMESTATE.Ingame;
+        } 
+        if (Input.anyKeyDown && Gamestate == GAMESTATE.Start)
+           Gamestate = GAMESTATE.Ingame;
     }
     #region States
     

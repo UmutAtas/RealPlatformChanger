@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using Button = UnityEngine.UI.Button;
+using UnityEngine.UI;
 
 public class UpgradeManager : Singleton<UpgradeManager>
 {
@@ -18,6 +18,10 @@ public class UpgradeManager : Singleton<UpgradeManager>
 
     [SerializeField]
     private TextMeshProUGUI moneyLevelTxt, staminaLevelTxt, speedLevelTxt, moneyPriceTxt, staminaPriceTxt, speedPriceTxt;
+
+    [SerializeField] private List<Image> moneyUpgradeImages = new List<Image>();
+    [SerializeField] private List<Image> staminaUpgradeImages = new List<Image>();
+    [SerializeField] private List<Image> speedUpgradeImages = new List<Image>();
 
     private int moneyLevel = 1, staminaLevel = 1, speedLevel = 1;
     private void Start()
@@ -89,5 +93,10 @@ public class UpgradeManager : Singleton<UpgradeManager>
     {
         priceIndex = PlayerPrefs.GetInt(prefName);
         priceText.text = listToGet[priceIndex - 1].ToString();
+    }
+
+    private void ButtonColors()
+    {
+        
     }
 }
