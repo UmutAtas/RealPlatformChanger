@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4407527017217678574}
   - component: {fileID: 7000577123458864333}
   - component: {fileID: 5410524265592923505}
-  - component: {fileID: 6936742595479965039}
+  - component: {fileID: 7012851681235842571}
   m_Layer: 7
   m_Name: UpwardSlopePlatform
   m_TagString: Untagged
@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 43a035b219e01584181826ffd3cbdd6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _platformController: {fileID: 0}
   pState: 0
---- !u!64 &6936742595479965039
+--- !u!64 &7012851681235842571
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
