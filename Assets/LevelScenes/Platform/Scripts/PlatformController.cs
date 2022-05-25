@@ -20,7 +20,7 @@ public class PlatformController : MonoBehaviour
     [SerializeField] private Transform allPlatforms;
     public Transform oldPlatforms;
 
-    private bool isTap;
+    public bool isTap;
     public bool canMove;
     public bool underPlayer;
     public enum PlatformState
@@ -32,12 +32,12 @@ public class PlatformController : MonoBehaviour
     
     private void Start()
     {
-        StartCoroutine(PlatformMoveDelay());
+        //StartCoroutine(PlatformMoveDelay());
     }
 
     private void Update()
     {
-        LockPlatformPosition();
+        //LockPlatformPosition();
     }
 
     private void FixedUpdate()
@@ -56,27 +56,27 @@ public class PlatformController : MonoBehaviour
         }
     }
 
-    private void LockPlatformPosition()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StopAllCoroutines();    
-            isTap = true;
-            canMove = false;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {   
-            isTap = false;
-            StartCoroutine(PlatformMoveDelay());
-        }
-    }
+    //private void LockPlatformPosition()
+    //{
+    //    if (Input.GetMouseButtonDown(0))
+    //    {
+    //        StopAllCoroutines();    
+    //        //isTap = true;
+    //        //canMove = false;
+    //    }
+    //    else if (Input.GetMouseButtonUp(0))
+    //    {   
+    //        //isTap = false;
+    //        StartCoroutine(PlatformMoveDelay());
+    //    }
+    //}
 
-    private IEnumerator PlatformMoveDelay()
-    {
-        for (int i = 0; i < allPlatforms.childCount; i++)
-        {
-            allPlatforms.GetChild(i).GetComponent<PlatformController>().canMove = true;
-            yield return new WaitForSeconds(platformMoveDelayTime);
-        }
-    }
+   //private IEnumerator PlatformMoveDelay()
+   //{
+   //    for (int i = 0; i < allPlatforms.childCount; i++)
+   //    {
+   //        allPlatforms.GetChild(i).GetComponent<PlatformController>().canMove = true;
+   //        yield return new WaitForSeconds(platformMoveDelayTime);
+   //    }
+   //}
 }

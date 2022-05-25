@@ -49,8 +49,8 @@ public class GameManager : Singleton<GameManager>
                 GameOver();
                 break;
         } 
-        if (Input.anyKeyDown && Gamestate == GAMESTATE.Start)
-           Gamestate = GAMESTATE.Ingame;
+        //if (Input.anyKeyDown && Gamestate == GAMESTATE.Start)
+          // Gamestate = GAMESTATE.Ingame;
     }
     #region States
     
@@ -101,6 +101,12 @@ public class GameManager : Singleton<GameManager>
         PlayerPrefs.SetInt("SaveScene",asyncSceneIndex);
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
+    }
+
+    public void StartInGame()
+    {
+        print("girdi");
+        Gamestate = GAMESTATE.Ingame;
     }
 
     #endregion

@@ -74,6 +74,11 @@ public class UpgradeManager : Singleton<UpgradeManager>
     
     public void SpeedUpgradeButton()
     {
+        if ( PlayerPrefs.GetInt("Coin") < moneyUpgradePrice[0])
+        {
+            return;
+        }
+       
         var currentSpeed = PlayerPrefs.GetFloat("Speed");
         PlayerPrefs.SetFloat("Speed", currentSpeed + newSpeed);
         PlayerController.Instance.SetPlayerSpeed();

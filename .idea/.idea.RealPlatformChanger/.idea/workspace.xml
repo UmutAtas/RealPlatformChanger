@@ -15,6 +15,7 @@
     <setting file="file://$PROJECT_DIR$/../PlatformChanger/Assets/LevelScenes/Player/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../PlatformChanger/Assets/Packages/NaughtyAttributes/Scripts/Editor/Utility/ReflectionUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/LevelEnd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../soap-it-up/Assets/2-Scripts/PlayerManagement/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MainScene/Scripts/UpgradeManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,15 +27,16 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMoveDelay.cs" />
       <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.6.11/Runtime/Behaviours/CinemachineDollyCart.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/LevelEnd.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
+      <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/MoneySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/UpgradeManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/LevelEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="28qK24a42l6S4a40xLfQebSKrY3" />
@@ -96,7 +98,7 @@
       <workItem from="1653065613602" duration="6286000" />
       <workItem from="1653210814618" duration="2864000" />
       <workItem from="1653403326750" duration="4931000" />
-      <workItem from="1653468802874" duration="3181000" />
+      <workItem from="1653468802874" duration="8478000" />
     </task>
     <servers />
   </component>

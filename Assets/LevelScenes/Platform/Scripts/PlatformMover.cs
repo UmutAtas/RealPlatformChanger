@@ -20,6 +20,7 @@ public class PlatformMover : MonoBehaviour
     
     public PlatformController.PlatformState pState;
     
+    
     private void Awake()
     {
         if (_platformController != null)
@@ -101,6 +102,7 @@ public class PlatformMover : MonoBehaviour
             if (_platformController != null)
             {
                 _platformController.underPlayer = false;
+                PlatformManager.Instance.platformControllerList.RemoveAt(0);
             }
         }
     }
