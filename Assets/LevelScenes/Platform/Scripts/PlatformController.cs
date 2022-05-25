@@ -14,10 +14,10 @@ public class PlatformController : MonoBehaviour
     
     public float moveTime = 1f;
     public float nextMoveTime = 1f;
-    [SerializeField] private float platformMoveDelayTime = 1f;
+    //[SerializeField] private float platformMoveDelayTime = 1f;
 
     [SerializeField] private List<PlatformMover> platformList = new List<PlatformMover>();
-    [SerializeField] private Transform allPlatforms;
+    //[SerializeField] private Transform allPlatforms;
     public Transform oldPlatforms;
 
     public bool isTap;
