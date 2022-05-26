@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
             _running = false;
         PressUp();
+        GetFill();
     }
 
     void PressDown()
@@ -53,11 +54,9 @@ public class PlayerMovement : MonoBehaviour
         _stamina -= Time.deltaTime * decreaseStamina;
         if (_stamina <= decreaseSpeedThreshold)
         {
-            if (_speed > 0)
+            if (_speed > _speed * 0.75f)
             {
                 _speed -= Time.deltaTime * decreaseSpeed;
-                fillAmount += Time.deltaTime * changeFillAmount;
-                playerMat.SetFloat("_Fill", fillAmount);
             }
             if (_stamina <= 0)
                 Lose();
@@ -68,23 +67,26 @@ public class PlayerMovement : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void GetFill()
+    {
+        var fill = _stamina / maxStamina;
+        fillAmount = 1f - fill;
+        playerMat.SetFloat("_Fill", fillAmount);
+    }
     
     void PressUp()
     {
-        if (!_running && _stamina <=maxStamina)
+        if (!_running && _stamina <= maxStamina)
         {
             _stamina += Time.deltaTime * increaseStamina;
             if (_stamina >= decreaseSpeedThreshold)
             {
                 _speed = baseSpeed;
-                fillAmount = 0;
-                playerMat.SetFloat("_Fill", fillAmount);
             }
             else if (_stamina <= 75 && _speed <= baseSpeed)
             {
                 _speed += Time.deltaTime * increaseSpeed;
-                fillAmount -= Time.deltaTime * changeFillAmount;
-                playerMat.SetFloat("_Fill", fillAmount);
             }
         }
     }
