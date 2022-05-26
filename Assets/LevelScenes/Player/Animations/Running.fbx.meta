@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f2eea140f0a0a240a669d078efe7481
+guid: 7e1950d18f134554dbf249b8571e4baa
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
@@ -19,8 +19,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
-      does not match:\n\tParent for 'mixamorig:Hips' differs from one found in HumanDescription.
-      'Stickman@Falling Back Death' was found instead of 'Armature'.\n"
+      does not match:\n\tTransform 'Armature' not found in HumanDescription.\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 

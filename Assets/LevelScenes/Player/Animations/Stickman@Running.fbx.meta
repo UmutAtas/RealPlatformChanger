@@ -286,13 +286,13 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: Stickman(Clone)
+    - name: RealStickman(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: StickMan
-      parentName: Stickman(Clone)
+      parentName: RealStickman(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -307,7 +307,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: Stickman(Clone)
+      parentName: RealStickman(Clone)
       position: {x: 0.0000005461678, y: 0.38257232, z: -0.0022785843}
       rotation: {x: 0.00000003557678, y: -0.00000010721768, z: -0.0000086322925, w: 1}
       scale: {x: 1, y: 1, z: 1}
