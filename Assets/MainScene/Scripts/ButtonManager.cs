@@ -1,6 +1,4 @@
 using System;
-using NaughtyAttributes;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -16,32 +14,9 @@ public class ButtonManager : Singleton<ButtonManager>
         _staminacost,
         _moneyamount;
 
-    private float _speed, _stamina;
     [SerializeField] private float disabledAlpha;
-    public float Speed
-    {
-        get
-        {
-            return _speed;
-        }
-        set
-        {
-            _speed = value;
-            PlayerPrefs.SetFloat("Speed",_speed);
-        }
-    }
-    public float Stamina
-    {
-        get
-        {
-            return _stamina;
-        }
-        set
-        {
-            _stamina = value;
-            PlayerPrefs.SetFloat("Stamina",_stamina);
-        }
-    }
+    public float Speed;
+    public float Stamina;
     public int MoneyAmount
     {
         get
@@ -152,8 +127,6 @@ public class ButtonManager : Singleton<ButtonManager>
         SpeedLevel = PlayerPrefs.GetInt("SpeedLevel", 1);
         StaminaLevel = PlayerPrefs.GetInt("StaminaLevel", 1);
         MoneyAmount = PlayerPrefs.GetInt("MoneyAmount", 1);
-        _speed = PlayerPrefs.GetFloat("Speed", 1.3f);
-        _stamina = PlayerPrefs.GetFloat("Stamina", 100);
     }
     private void OnDisable()
     {
@@ -185,7 +158,7 @@ public class ButtonManager : Singleton<ButtonManager>
         UIManager.Instance.SetCoin(-SpeedCost);
         SpeedCost += SpeedCost/SpeedLevel;
         SpeedLevel += 1;
-        Speed += SpeedUpgrade;
+        PlayerPrefs.SetFloat("Speed",PlayerPrefs.GetFloat("Speed")+SpeedUpgrade);
         var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
         upgradeParticleList.Add(particle);
     }
@@ -197,7 +170,7 @@ public class ButtonManager : Singleton<ButtonManager>
         UIManager.Instance.SetCoin(-StaminaCost);
         StaminaCost += (StaminaCost / StaminaLevel);
         StaminaLevel += 1;
-        Stamina += StaminaUpgrade;
+        PlayerPrefs.SetFloat("Stamina",PlayerPrefs.GetFloat("Stamina")+StaminaUpgrade);
         var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
         upgradeParticleList.Add(particle);
     }
