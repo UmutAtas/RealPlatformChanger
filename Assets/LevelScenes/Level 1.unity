@@ -361,7 +361,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -726,7 +726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966128261}
   m_LocalRotation: {x: 0.17272598, y: -0.08005442, z: 0.010214432, w: 0.9816582}
-  m_LocalPosition: {x: 1.061, y: 12.781, z: -11.915}
+  m_LocalPosition: {x: 0.38, y: 11.54, z: -12.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1038,6 +1038,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: _speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: decreaseSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: increaseSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: increaseStamina
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: decreaseSpeedThreshold
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 812165560244753502, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_IsKinematic
       value: 0
