@@ -14,9 +14,7 @@ public class PlayerMovement : MonoBehaviour
     
     [NonSerialized] public float baseSpeed;
     [NonSerialized] public float maxStamina;
-    public float _speed = 3f;
-    public float _stamina = 100f;
-    
+
     private bool _running;
 
     [SerializeField] private GameObject playerShader;
@@ -24,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [Range(0,1)]
     private float fillAmount;
 
+    private ButtonManager BM;
     private void Awake()
     {
         playerMat = playerShader.GetComponent<SkinnedMeshRenderer>().material;
@@ -31,8 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        maxStamina =_stamina;
-        baseSpeed = _speed;
+        BM = ButtonManager.Instance;
+        maxStamina =BM.Stamina;
+        baseSpeed = BM.Speed;
         fillAmount = 0f;
     }
 
@@ -53,14 +53,14 @@ public class PlayerMovement : MonoBehaviour
 
     void PressDown()
     {
-        _stamina -= Time.deltaTime * decreaseStamina;
-        if (_stamina <= decreaseSpeedThreshold)
+        BM.Stamina -= Time.deltaTime * decreaseStamina;
+        if (BM.Stamina <= decreaseSpeedThreshold)
         {
-            if (_speed > _speed * 0.75f)
+            if (BM.Speed > BM.Speed * 0.75f)
             {
-                _speed -= Time.deltaTime * decreaseSpeed;
+                BM.Speed -= Time.deltaTime * decreaseSpeed;
             }
-            if (_stamina <= 0)
+            if (BM.Stamina <= 0)
                 Lose();
         }
     }
@@ -72,23 +72,23 @@ public class PlayerMovement : MonoBehaviour
 
     void GetFill()
     {
-        var fill = _stamina / maxStamina;
+        var fill = BM.Stamina / maxStamina;
         fillAmount = 1f - fill;
         playerMat.SetFloat("_Fill", fillAmount);
     }
     
     void PressUp()
     {
-        if (!_running && _stamina <= maxStamina)
+        if (!_running && BM.Stamina <= maxStamina)
         {
-            _stamina += Time.deltaTime * increaseStamina;
-            if (_stamina >= decreaseSpeedThreshold)
+            BM.Stamina += Time.deltaTime * increaseStamina;
+            if (BM.Stamina >= decreaseSpeedThreshold)
             {
-                _speed = baseSpeed;
+                BM.Speed = baseSpeed;
             }
-            else if (_stamina <= 75 && _speed <= baseSpeed)
+            else if (BM.Stamina <= 75 && BM.Speed <= baseSpeed)
             {
-                _speed += Time.deltaTime * increaseSpeed;
+                BM.Speed += Time.deltaTime * increaseSpeed;
             }
         }
     }

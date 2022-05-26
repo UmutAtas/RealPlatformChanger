@@ -1,13 +1,58 @@
 using System;
+using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-
-public class test : MonoBehaviour
+public class ButtonManager : Singleton<ButtonManager>
 {
     [SerializeField]float MoneyUpgrade, SpeedUpgrade, StaminaUpgrade;
-    private int _moneylevel, _speedlevel, _staminalevel, _moneycost, _speedcost, _staminacost;
 
+    private int _moneylevel,
+        _speedlevel,
+        _staminalevel,
+        _moneycost,
+        _speedcost,
+        _staminacost,
+        _moneyamount;
+
+    private float _speed, _stamina;
+    [SerializeField] private float disabledAlpha;
+    public float Speed
+    {
+        get
+        {
+            return _speed;
+        }
+        set
+        {
+            _speed = value;
+            PlayerPrefs.SetFloat("Speed",_speed);
+        }
+    }
+    public float Stamina
+    {
+        get
+        {
+            return _stamina;
+        }
+        set
+        {
+            _stamina = value;
+            PlayerPrefs.SetFloat("Stamina",_stamina);
+        }
+    }
+    public int MoneyAmount
+    {
+        get
+        {
+            return _moneyamount;
+        }
+        set
+        {
+            _moneyamount = value;
+            PlayerPrefs.SetInt("MoneyAmount",_moneyamount);
+        }
+    }
+    
     int MoneyCost
     {
         get
@@ -18,7 +63,7 @@ public class test : MonoBehaviour
         {
             _moneycost = value;
             moneyPriceTxt.text = _moneycost.ToString();
-            PlayerPrefs.SetInt("Money", _moneycost);
+            PlayerPrefs.SetInt("MoneyCost", _moneycost);
         }
     }
     int MoneyLevel
@@ -45,7 +90,7 @@ public class test : MonoBehaviour
         {
             _speedcost = value;
             speedPriceTxt.text = _speedcost.ToString();
-            PlayerPrefs.SetInt("Speed", _speedcost);
+            PlayerPrefs.SetInt("SpeedCost", _speedcost);
         }
     }
     int SpeedLevel
@@ -72,7 +117,7 @@ public class test : MonoBehaviour
         {
             _staminacost = value;
             staminaPriceTxt.text = _staminacost.ToString();
-            PlayerPrefs.SetInt("Stamina", _staminacost);
+            PlayerPrefs.SetInt("StaminaCost", _staminacost);
         }
     }
     int StaminaLevel
@@ -89,16 +134,32 @@ public class test : MonoBehaviour
         }
     }
     
+    [SerializeField] private CanvasGroup moneyCanvasGroup, staminaCanvasGroup, speedCanvasGroup;
     [SerializeField] TextMeshProUGUI moneyLevelTxt, staminaLevelTxt, speedLevelTxt, moneyPriceTxt, staminaPriceTxt, speedPriceTxt;
     void Start()
     {
-        MoneyCost = PlayerPrefs.GetInt("Money", 50);
-        SpeedCost = PlayerPrefs.GetInt("Speed", 50);
-        StaminaCost = PlayerPrefs.GetInt("Stamina", 50);
+        EventManager.Instance.OnCoin += CheckCoin;
+        MoneyCost = PlayerPrefs.GetInt("MoneyCost", 50);
+        SpeedCost = PlayerPrefs.GetInt("SpeedCost", 50);
+        StaminaCost = PlayerPrefs.GetInt("StaminaCost", 50);
         MoneyLevel = PlayerPrefs.GetInt("MoneyLevel",1);
         SpeedLevel = PlayerPrefs.GetInt("SpeedLevel", 1);
         StaminaLevel = PlayerPrefs.GetInt("StaminaLevel", 1);
+        MoneyAmount = PlayerPrefs.GetInt("MoneyAmount", 1);
+        _speed = PlayerPrefs.GetFloat("Speed", 1.3f);
+        _stamina = PlayerPrefs.GetFloat("Stamina", 100);
     }
+    private void OnDisable()
+    {
+        EventManager.Instance.OnCoin -= CheckCoin;
+    }
+    void CheckCoin()
+    {
+        moneyCanvasGroup.alpha = _moneycost > UIManager.Instance.m_Coin ? disabledAlpha : 1;
+        speedCanvasGroup.alpha = _speedcost > UIManager.Instance.m_Coin ? disabledAlpha : 1;
+        staminaCanvasGroup.alpha = _staminacost > UIManager.Instance.m_Coin ? disabledAlpha : 1;
+    }
+    
     public void BuyMoney()
     {
         if(MoneyCost > UIManager.Instance.m_Coin)
@@ -106,7 +167,9 @@ public class test : MonoBehaviour
         UIManager.Instance.SetCoin(-MoneyCost);
         MoneyCost += MoneyCost/MoneyLevel;
         MoneyLevel += 1;
+        MoneyAmount += (int)MoneyUpgrade;
     }
+    
     public void BuySpeed()
     {
         if(SpeedCost > UIManager.Instance.m_Coin)
@@ -114,7 +177,9 @@ public class test : MonoBehaviour
         UIManager.Instance.SetCoin(-SpeedCost);
         SpeedCost += SpeedCost/SpeedLevel;
         SpeedLevel += 1;
+        Speed += SpeedUpgrade;
     }
+    
     public void BuyStamina()
     {
         if(StaminaCost > UIManager.Instance.m_Coin)
@@ -122,5 +187,6 @@ public class test : MonoBehaviour
         UIManager.Instance.SetCoin(-StaminaCost);
         StaminaCost += (StaminaCost / StaminaLevel);
         StaminaLevel += 1;
+        Stamina += StaminaUpgrade;
     }
 }

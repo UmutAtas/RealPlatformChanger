@@ -7,15 +7,8 @@ public class UIManager : Singleton<UIManager>
     TextMeshProUGUI m_CoinText, m_LevelText;
     [SerializeField]Sprite MuteOn, MuteOff, TapticOn, TapticOff;
     GameObject m_Settings;
+    [HideInInspector]
     public int m_Coin;
-    void OnEnable()
-    {
-        EventManager.Instance.OnCoin += SetCoin;
-    }
-    void OnDisable()
-    {
-        EventManager.Instance.OnCoin -= SetCoin;
-    }
     void Start()
     {
         m_LevelText = InGameP.transform.GetChild(0).GetComponent<TextMeshProUGUI>();

@@ -1386,6 +1386,7 @@ MonoBehaviour:
   MuteOff: {fileID: 21300000, guid: dbece44421da872488ac60233cc16596, type: 3}
   TapticOn: {fileID: 21300000, guid: eaf1171167b74814492b2f88b58681cf, type: 3}
   TapticOff: {fileID: 21300000, guid: d58827e9282ef4943aae90d2db46c1af, type: 3}
+  m_Coin: 0
 --- !u!224 &1193100759 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 790871450469926571, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
@@ -2079,7 +2080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1784856068}
-  - component: {fileID: 1784856069}
+  - component: {fileID: 1784856070}
   m_Layer: 0
   m_Name: UpgradeManager
   m_TagString: Untagged
@@ -2101,7 +2102,7 @@ Transform:
   m_Father: {fileID: 1079501275}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1784856069
+--- !u!114 &1784856070
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2110,27 +2111,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1784856067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88f4454447acf5f40b465eb6ce400a2a, type: 3}
+  m_Script: {fileID: 11500000, guid: e40f44d4e17a7b94d8b0c1131867572d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyAmount: 1
-  moneyUpgradeAmount: 2
-  speedUpgradeAmount: 0.5
-  staminaUpgradeAmount: 8
-  moneyUpgradeCost: 50
-  staminaUpgradeCost: 50
-  speedUpgradeCost: 50
-  increaseUpgradeCostPercent: 1
+  MoneyUpgrade: 2
+  SpeedUpgrade: 0.5
+  StaminaUpgrade: 8
+  disabledAlpha: 0.5
+  moneyCanvasGroup: {fileID: 2097433013}
+  staminaCanvasGroup: {fileID: 1193100763}
+  speedCanvasGroup: {fileID: 234840893}
   moneyLevelTxt: {fileID: 807360713}
   staminaLevelTxt: {fileID: 1919667550}
   speedLevelTxt: {fileID: 1006781632}
   moneyPriceTxt: {fileID: 327996090}
   staminaPriceTxt: {fileID: 1478778011}
   speedPriceTxt: {fileID: 1659943724}
-  moneyCanvasGroup: {fileID: 2097433013}
-  staminaCanvasGroup: {fileID: 1193100763}
-  speedCanvasGroup: {fileID: 234840893}
-  disabledAlpha: 0.5
 --- !u!1 &1856172504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2694,15 @@ PrefabInstance:
     - target: {fileID: 790871450469926566, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1784856069}
+      objectReference: {fileID: 1784856070}
+    - target: {fileID: 790871450469926566, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyStamina
+      objectReference: {fileID: 0}
+    - target: {fileID: 790871450469926566, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: test, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 790871450469926570, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
       propertyPath: m_Name
       value: StaminaUpgradeButton
@@ -2964,7 +2968,15 @@ PrefabInstance:
     - target: {fileID: 3396714640010837381, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1784856069}
+      objectReference: {fileID: 1784856070}
+    - target: {fileID: 3396714640010837381, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyMoney
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396714640010837381, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: test, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9564f1bc91b28b341a02926a52243cad, type: 3}
 --- !u!224 &7700188746130576594
@@ -3484,7 +3496,15 @@ PrefabInstance:
     - target: {fileID: 8788171051263633314, guid: b8604acd73d9d4140a429b7714eb88c6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1784856069}
+      objectReference: {fileID: 1784856070}
+    - target: {fileID: 8788171051263633314, guid: b8604acd73d9d4140a429b7714eb88c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuySpeed
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788171051263633314, guid: b8604acd73d9d4140a429b7714eb88c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: test, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8788171051263633318, guid: b8604acd73d9d4140a429b7714eb88c6, type: 3}
       propertyPath: m_Name
       value: SpeedUpgradeButton
