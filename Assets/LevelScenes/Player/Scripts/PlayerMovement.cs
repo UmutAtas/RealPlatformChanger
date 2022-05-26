@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private float fillAmount;
 
     private ButtonManager BM;
+
+    [SerializeField] private GameObject ragDoll;
     private void Awake()
     {
         playerMat = playerShader.GetComponent<SkinnedMeshRenderer>().material;
@@ -67,7 +69,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Lose()
     {
-        Destroy(gameObject);
+       gameObject.SetActive(false);
+       Instantiate(ragDoll, transform.position, Quaternion.identity);
     }
 
     void GetFill()
