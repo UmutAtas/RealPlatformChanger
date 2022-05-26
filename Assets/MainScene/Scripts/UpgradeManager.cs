@@ -49,11 +49,6 @@ public class UpgradeManager : Singleton<UpgradeManager>
         UpgradePriceText(speedPriceTxt, speedUpgradeCost, "SpeedLevel");
     }
 
-    private void Update()
-    {
-        print(PlayerPrefs.GetInt("Coin"));
-    }
-
     private void GetCanvasGroupAlpha(TextMeshProUGUI priceKind, CanvasGroup canvasGroupKind)
     {
         var coin = PlayerPrefs.GetInt("Coin");
