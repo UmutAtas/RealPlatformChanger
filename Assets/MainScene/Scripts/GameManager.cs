@@ -105,7 +105,6 @@ public class GameManager : Singleton<GameManager>
 
     public void StartInGame()
     {
-        print("girdi");
         Gamestate = GAMESTATE.Ingame;
     }
 

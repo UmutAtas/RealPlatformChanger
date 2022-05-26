@@ -12,14 +12,19 @@ public class UpgradeManager : Singleton<UpgradeManager>
     [SerializeField] private int moneyUpgradeAmount;
     [SerializeField] private float speedUpgradeAmount, staminaUpgradeAmount;
 
-    [SerializeField] private List<int> moneyUpgradePrice = new List<int>();
-    [SerializeField] private List<int> staminaUpgradePrice = new List<int>();
-    [SerializeField] private List<int> speedUpgradePrice = new List<int>();
+    [SerializeField] private int moneyUpgradeCost;
+    [SerializeField] private int staminaUpgradeCost;
+    [SerializeField] private int speedUpgradeCost;
+    [SerializeField] private float increaseUpgradeCostPercent;
 
     [SerializeField]
     private TextMeshProUGUI moneyLevelTxt, staminaLevelTxt, speedLevelTxt, moneyPriceTxt, staminaPriceTxt, speedPriceTxt;
 
+    [SerializeField] private CanvasGroup moneyCanvasGroup, staminaCanvasGroup, speedCanvasGroup;
+
     private int moneyLevel = 1, staminaLevel = 1, speedLevel = 1;
+    [SerializeField] private float disabledAlpha;
+
     private void Start()
     {
         // getint("name" , defaultvalue)
@@ -36,53 +41,88 @@ public class UpgradeManager : Singleton<UpgradeManager>
             PlayerPrefs.SetInt("StaminaLevel", staminaLevel);
         if (!PlayerPrefs.HasKey("SpeedLevel"))
             PlayerPrefs.SetInt("SpeedLevel", speedLevel);
-        
+
         PlayerController.Instance.SetPlayerSpeed();
         PlayerController.Instance.SetPlayerStamina();
+        
+        GetCanvasGroupAlpha(moneyPriceTxt,moneyCanvasGroup);
+        GetCanvasGroupAlpha(staminaPriceTxt,staminaCanvasGroup);
+        GetCanvasGroupAlpha(speedPriceTxt,speedCanvasGroup);
+        
         UpgradeLevelText(moneyLevelTxt, moneyLevel, "MoneyLevel");
         UpgradeLevelText(staminaLevelTxt, staminaLevel, "StaminaLevel");
         UpgradeLevelText(speedLevelTxt, speedLevel, "SpeedLevel");
-        UpgradePriceText(moneyPriceTxt, moneyLevel, moneyUpgradePrice, "MoneyLevel");
-        UpgradePriceText(staminaPriceTxt, staminaLevel, staminaUpgradePrice, "StaminaLevel");
-        UpgradePriceText(speedPriceTxt, speedLevel, speedUpgradePrice, "SpeedLevel");
+        UpgradePriceText(moneyPriceTxt, moneyUpgradeCost, "MoneyLevel");
+        UpgradePriceText(staminaPriceTxt, staminaUpgradeCost, "StaminaLevel");
+        UpgradePriceText(speedPriceTxt, speedUpgradeCost, "SpeedLevel");
+    }
+
+    private void GetCanvasGroupAlpha(TextMeshProUGUI priceKind, CanvasGroup canvasGroupKind)
+    {
+        var coin = PlayerPrefs.GetInt("Coin");
+        var upgradeCost = int.Parse(priceKind.text);
+        if (coin < upgradeCost && GameManager.Instance.Gamestate == GameManager.GAMESTATE.Start)
+            canvasGroupKind.alpha = disabledAlpha;
+        else
+            canvasGroupKind.alpha = 1;
     }
 
     public void MoneyUpgradeButton()
     {
+        var upgradeCost = int.Parse(moneyPriceTxt.text);
+        if (PlayerPrefs.GetInt("Coin") < upgradeCost)
+            return;
         var currentMoney = PlayerPrefs.GetInt("MoneyAmount");
         PlayerPrefs.SetInt("MoneyAmount", currentMoney + moneyUpgradeAmount);
         moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
         var currentMoneyLevel = PlayerPrefs.GetInt("MoneyLevel");
         PlayerPrefs.SetInt("MoneyLevel", currentMoneyLevel + 1);
         UpgradeLevelText(moneyLevelTxt, moneyLevel, "MoneyLevel");
-        UpgradePriceText(moneyPriceTxt, moneyLevel, moneyUpgradePrice, "MoneyLevel");
+        UpgradePriceText(moneyPriceTxt, moneyUpgradeCost, "MoneyLevel");
+        var coin = PlayerPrefs.GetInt("Coin");
+        PlayerPrefs.SetInt("Coin", coin - upgradeCost);
+        CheckButtonAvailable();
     }
     
     public void StaminaUpgradeButton()
     {
+        var upgradeCost = int.Parse(staminaPriceTxt.text);
+        if (PlayerPrefs.GetInt("Coin") < upgradeCost)
+            return;
         var currentStamina = PlayerPrefs.GetFloat("Stamina");
         PlayerPrefs.SetFloat("Stamina", currentStamina + staminaUpgradeAmount);
         PlayerController.Instance.SetPlayerStamina();
         var currentStaminaLevel = PlayerPrefs.GetInt("StaminaLevel");
         PlayerPrefs.SetInt("StaminaLevel", currentStaminaLevel + 1);
         UpgradeLevelText(staminaLevelTxt, staminaLevel, "StaminaLevel");
-        UpgradePriceText(staminaPriceTxt, staminaLevel, staminaUpgradePrice, "StaminaLevel");
+        UpgradePriceText(staminaPriceTxt, staminaUpgradeCost, "StaminaLevel");
+        var coin = PlayerPrefs.GetInt("Coin");
+        PlayerPrefs.SetInt("Coin", coin - upgradeCost);
+        CheckButtonAvailable();
     }
     
     public void SpeedUpgradeButton()
     {
-       //if ( PlayerPrefs.GetInt("Coin") < moneyUpgradePrice[0])
-       //{
-       //    return;
-       //}
-       
+        var upgradeCost = int.Parse(speedPriceTxt.text);
+        if (PlayerPrefs.GetInt("Coin") < upgradeCost)
+            return;
         var currentSpeed = PlayerPrefs.GetFloat("Speed");
         PlayerPrefs.SetFloat("Speed", currentSpeed + speedUpgradeAmount);
         PlayerController.Instance.SetPlayerSpeed();
         var currentSpeedLevel = PlayerPrefs.GetInt("SpeedLevel");
         PlayerPrefs.SetInt("SpeedLevel", currentSpeedLevel + 1);
         UpgradeLevelText(speedLevelTxt, speedLevel, "SpeedLevel");
-        UpgradePriceText(speedPriceTxt, speedLevel, speedUpgradePrice, "SpeedLevel");
+        UpgradePriceText(speedPriceTxt, speedUpgradeCost, "SpeedLevel");
+        var coin = PlayerPrefs.GetInt("Coin");
+        PlayerPrefs.SetInt("Coin", coin - upgradeCost);
+        CheckButtonAvailable();
+    }
+
+    private void CheckButtonAvailable()
+    {
+        GetCanvasGroupAlpha(moneyPriceTxt,moneyCanvasGroup);
+        GetCanvasGroupAlpha(staminaPriceTxt,staminaCanvasGroup);
+        GetCanvasGroupAlpha(speedPriceTxt,speedCanvasGroup);
     }
     
     private void UpgradeLevelText(TextMeshProUGUI levelText, int intToSet , string prefName)
@@ -90,10 +130,18 @@ public class UpgradeManager : Singleton<UpgradeManager>
         intToSet = PlayerPrefs.GetInt(prefName);
         levelText.text = "Level " + intToSet;
     }
-
-    private void UpgradePriceText(TextMeshProUGUI priceText, int priceIndex , List<int> listToGet , string prefName)
+    
+    private void UpgradePriceText(TextMeshProUGUI priceText, int upgradeKind, string prefName)
     {
-        priceIndex = PlayerPrefs.GetInt(prefName);
-        priceText.text = listToGet[priceIndex - 1].ToString();
+        var upgradeLevelIndex = PlayerPrefs.GetInt(prefName);
+        if (upgradeLevelIndex == 1)
+        {
+            priceText.text = upgradeKind.ToString();
+        }
+        else
+        {
+            upgradeKind = (int) (upgradeKind * (increaseUpgradeCostPercent * upgradeLevelIndex));
+            priceText.text = upgradeKind.ToString();
+        }
     }
 }

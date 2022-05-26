@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerPathFind : MonoBehaviour
 {
     [SerializeField] private CinemachineDollyCart _dollyCart;
-    [SerializeField] private float waitTime;
+    //[SerializeField] private float waitTime;
 
     private void OnTriggerEnter(Collider other)
     {

@@ -1038,30 +1038,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 812165560244753502, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1642989890231353914, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 37ba08bed9155cc45b070732eb50e2e0, type: 2}
-    - target: {fileID: 3575820319203091502, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: de00be97e77444746902ba5b189f92e7, type: 3}
-    - target: {fileID: 4017560380352714800, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: _speed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: moneyParent
       value: 
       objectReference: {fileID: 1261785040}
-    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: moneySpawnDistance
-      value: 1.4
-      objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890309, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_Name
       value: PlayerPath
