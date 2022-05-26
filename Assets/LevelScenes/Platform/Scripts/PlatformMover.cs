@@ -102,7 +102,8 @@ public class PlatformMover : MonoBehaviour
             if (_platformController != null)
             {
                 _platformController.underPlayer = false;
-                PlatformManager.Instance.platformControllerList.RemoveAt(0);
+                if (PlatformManager.Instance.platformControllerList != null)
+                    PlatformManager.Instance.platformControllerList.RemoveAt(0);
             }
         }
     }

@@ -23,11 +23,13 @@ public class PlatformManager : Singleton<PlatformManager>
     {
         if (Input.GetMouseButtonDown(0))
         {
-            platformControllerList[0].isTap = true;
+            if (platformControllerList.Count > 0)
+                platformControllerList[0].isTap = true;
         }
         else if (Input.GetMouseButtonUp(0))
-        {   
-            platformControllerList[0].isTap = false;
+        {
+            if (platformControllerList.Count > 0)
+                platformControllerList[0].isTap = false;
         }
     }
     
