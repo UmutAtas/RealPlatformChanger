@@ -23,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     private Material playerMat;
     [Range(0,1)]
     private float fillAmount;
-    [SerializeField] private float changeFillAmount;
 
     private void Awake()
     {

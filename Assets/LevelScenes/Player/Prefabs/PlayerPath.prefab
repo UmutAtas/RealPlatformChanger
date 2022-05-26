@@ -162,12 +162,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 752873161335303616}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: _speed
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: playerShader
       value: 
       objectReference: {fileID: 5351930535402032434}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: decreaseSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: increaseSpeed
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: decreaseStamina
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: increaseStamina
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: changeFillAmount
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: decreaseSpeedThreshold
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5310260447698116996, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: m_Layer
