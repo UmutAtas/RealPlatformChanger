@@ -1302,9 +1302,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6855868809786371605}
   - {fileID: 1584883717}
   - {fileID: 311909430}
-  - {fileID: 6855868809786371605}
   - {fileID: 1018868703610793518}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1389,7 +1389,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3699366171986412786, guid: 36c4ea01d1450c44ab618412b3b6e5f1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3699366171986412786, guid: 36c4ea01d1450c44ab618412b3b6e5f1, type: 3}
       propertyPath: m_LocalPosition.x
