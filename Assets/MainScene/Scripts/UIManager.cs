@@ -7,7 +7,7 @@ public class UIManager : Singleton<UIManager>
     TextMeshProUGUI m_CoinText, m_LevelText;
     [SerializeField]Sprite MuteOn, MuteOff, TapticOn, TapticOff;
     GameObject m_Settings;
-    int m_Coin;
+    public int m_Coin;
     void OnEnable()
     {
         EventManager.Instance.OnCoin += SetCoin;
