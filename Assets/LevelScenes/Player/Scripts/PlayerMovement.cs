@@ -38,14 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            _running = true;
-        if(Input.GetMouseButton(0))
-            PressDown();
-        if (Input.GetMouseButtonUp(0))
-            _running = false;
-        PressUp();
-        GetFill();
+        if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
+        {
+            if (Input.GetMouseButtonDown(0))
+                _running = true;
+            if(Input.GetMouseButton(0))
+                PressDown();
+            if (Input.GetMouseButtonUp(0))
+                _running = false;
+            PressUp();
+            GetFill();
+        }
     }
 
     void PressDown()
