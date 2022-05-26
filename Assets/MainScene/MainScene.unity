@@ -174,7 +174,7 @@ RectTransform:
   - {fileID: 1474085234643665807}
   - {fileID: 1405577418}
   m_Father: {fileID: 1737582057}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -540,7 +540,7 @@ RectTransform:
   - {fileID: 7700188746130576594}
   - {fileID: 7700188746346392270}
   m_Father: {fileID: 2037114915}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1382,6 +1382,7 @@ MonoBehaviour:
   InGameP: {fileID: 1737582056}
   NextP: {fileID: 503092206}
   GameOverP: {fileID: 1685802764}
+  m_CoinText: {fileID: 475128934}
   MuteOn: {fileID: 21300000, guid: 0468e7878e916004d8eed5b3462a5487, type: 3}
   MuteOff: {fileID: 21300000, guid: dbece44421da872488ac60233cc16596, type: 3}
   TapticOn: {fileID: 21300000, guid: eaf1171167b74814492b2f88b58681cf, type: 3}
@@ -1565,7 +1566,7 @@ RectTransform:
   - {fileID: 1193100759}
   - {fileID: 234840889}
   m_Father: {fileID: 2037114915}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1772,8 +1773,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 475128933}
-  m_Father: {fileID: 1737582057}
-  m_RootOrder: 1
+  m_Father: {fileID: 2037114915}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1873,7 +1874,7 @@ RectTransform:
   - {fileID: 1859860686}
   - {fileID: 2139349014}
   m_Father: {fileID: 2037114915}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1948,10 +1949,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1856172505}
-  - {fileID: 1474538166}
   - {fileID: 388382954}
   m_Father: {fileID: 2037114915}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2528,6 +2528,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1474538166}
   - {fileID: 1359944425}
   - {fileID: 1737582057}
   - {fileID: 503092207}

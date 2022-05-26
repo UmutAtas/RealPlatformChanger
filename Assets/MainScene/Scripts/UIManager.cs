@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField]GameObject StartP, InGameP, NextP, GameOverP;
-    TextMeshProUGUI m_CoinText, m_LevelText;
+    [SerializeField] private TextMeshProUGUI m_CoinText; 
+    TextMeshProUGUI m_LevelText;
     [SerializeField]Sprite MuteOn, MuteOff, TapticOn, TapticOff;
     GameObject m_Settings;
     [HideInInspector]
@@ -12,10 +13,10 @@ public class UIManager : Singleton<UIManager>
     void Start()
     {
         m_LevelText = InGameP.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
-        m_CoinText = InGameP.transform.GetChild(1).GetComponentInChildren<TextMeshProUGUI>();
-        m_Settings = InGameP.transform.GetChild(2).GetChild(0).gameObject;
+        m_Settings = InGameP.transform.GetChild(1).GetChild(0).gameObject;
         m_LevelText.text = "LEVEL " + PlayerPrefs.GetInt("Level", 1);
         m_Coin = PlayerPrefs.GetInt("Coin", 0);
+        SetCoin(0);
     }
     public void PanelController(GameManager.GAMESTATE currentPanel)
     {
