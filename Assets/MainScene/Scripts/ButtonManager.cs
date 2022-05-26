@@ -1,5 +1,7 @@
 using System;
 using NaughtyAttributes;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 public class ButtonManager : Singleton<ButtonManager>
@@ -136,8 +138,13 @@ public class ButtonManager : Singleton<ButtonManager>
     
     [SerializeField] private CanvasGroup moneyCanvasGroup, staminaCanvasGroup, speedCanvasGroup;
     [SerializeField] TextMeshProUGUI moneyLevelTxt, staminaLevelTxt, speedLevelTxt, moneyPriceTxt, staminaPriceTxt, speedPriceTxt;
+
+    [SerializeField] private GameObject upgradeParticle;
+    [SerializeField] private Transform upgradeParent;
+    [NonSerialized] public List<GameObject> upgradeParticleList = new List<GameObject>();
     void Start()
     {
+        UIManager.Instance.SetCoin(1000);
         EventManager.Instance.OnCoin += CheckCoin;
         MoneyCost = PlayerPrefs.GetInt("MoneyCost", 50);
         SpeedCost = PlayerPrefs.GetInt("SpeedCost", 50);
@@ -168,6 +175,8 @@ public class ButtonManager : Singleton<ButtonManager>
         MoneyCost += MoneyCost/MoneyLevel;
         MoneyLevel += 1;
         MoneyAmount += (int)MoneyUpgrade;
+        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        upgradeParticleList.Add(particle);
     }
     
     public void BuySpeed()
@@ -178,6 +187,8 @@ public class ButtonManager : Singleton<ButtonManager>
         SpeedCost += SpeedCost/SpeedLevel;
         SpeedLevel += 1;
         Speed += SpeedUpgrade;
+        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        upgradeParticleList.Add(particle);
     }
     
     public void BuyStamina()
@@ -188,5 +199,7 @@ public class ButtonManager : Singleton<ButtonManager>
         StaminaCost += (StaminaCost / StaminaLevel);
         StaminaLevel += 1;
         Stamina += StaminaUpgrade;
+        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        upgradeParticleList.Add(particle);
     }
 }

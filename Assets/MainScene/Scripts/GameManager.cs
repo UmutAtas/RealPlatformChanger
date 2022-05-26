@@ -78,6 +78,7 @@ public class GameManager : Singleton<GameManager>
         SceneManager.LoadSceneAsync(asyncSceneIndex, LoadSceneMode.Additive);
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
+        DestroyParticles();
     }
     public void NextLevelButton()
     {
@@ -101,11 +102,21 @@ public class GameManager : Singleton<GameManager>
         PlayerPrefs.SetInt("SaveScene",asyncSceneIndex);
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
+        DestroyParticles();
     }
 
     public void StartInGame()
     {
         Gamestate = GAMESTATE.Ingame;
+    }
+
+    private void DestroyParticles()
+    {
+        foreach (var particle in ButtonManager.Instance.upgradeParticleList)
+        {
+            Destroy(particle);
+        }
+        ButtonManager.Instance.upgradeParticleList.Clear();
     }
 
     #endregion

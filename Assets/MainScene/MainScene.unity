@@ -585,6 +585,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503092206}
   m_CullTransparentMesh: 1
+--- !u!1 &503873436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503873437}
+  m_Layer: 0
+  m_Name: ParticleParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503873437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503873436}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.025, y: 10.783, z: -10.544}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &513037847
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2157,8 @@ MonoBehaviour:
   moneyPriceTxt: {fileID: 327996090}
   staminaPriceTxt: {fileID: 1478778011}
   speedPriceTxt: {fileID: 1659943724}
+  upgradeParticle: {fileID: 2447134664577434119, guid: d59051e20c7276c4c90736aa8f072e2b, type: 3}
+  upgradeParent: {fileID: 503873437}
 --- !u!1 &1856172504
 GameObject:
   m_ObjectHideFlags: 0
