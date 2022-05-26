@@ -97,7 +97,7 @@ public class GameManager : Singleton<GameManager>
 
             SceneManager.LoadSceneAsync(asyncSceneIndex, LoadSceneMode.Additive);
         }
-        UIManager.Instance.SetLevel();
+        UIManager.Instance.SetLevel(1);
         PlayerPrefs.SetInt("SaveScene",asyncSceneIndex);
         Gamestate = GAMESTATE.Start;
         CountDown = 2;

@@ -1766,7 +1766,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474538165}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2117,9 +2117,9 @@ MonoBehaviour:
   moneyUpgradeAmount: 2
   speedUpgradeAmount: 0.5
   staminaUpgradeAmount: 8
-  moneyUpgradeCost: 250
-  staminaUpgradeCost: 350
-  speedUpgradeCost: 500
+  moneyUpgradeCost: 50
+  staminaUpgradeCost: 50
+  speedUpgradeCost: 50
   increaseUpgradeCostPercent: 1
   moneyLevelTxt: {fileID: 807360713}
   staminaLevelTxt: {fileID: 1919667550}

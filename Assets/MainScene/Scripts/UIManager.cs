@@ -46,10 +46,10 @@ public class UIManager : Singleton<UIManager>
                 break;
         }
     }
-    public void SetLevel()
+    public void SetLevel(int amount)
     {
         PlayerPrefs.SetInt("Coin",m_Coin);
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 1) + 1);
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level", 1) + amount);
         m_LevelText.text = "LEVEL " + PlayerPrefs.GetInt("Level", 1);
     }
     public void Settings()
@@ -78,5 +78,6 @@ public class UIManager : Singleton<UIManager>
     {
         m_Coin += value;
         m_CoinText.text = m_Coin.ToString();
+        SetLevel(0);
     } // Add or Remove Coin
 }
