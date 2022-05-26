@@ -144,7 +144,6 @@ public class ButtonManager : Singleton<ButtonManager>
     [NonSerialized] public List<GameObject> upgradeParticleList = new List<GameObject>();
     void Start()
     {
-        UIManager.Instance.SetCoin(1000);
         EventManager.Instance.OnCoin += CheckCoin;
         MoneyCost = PlayerPrefs.GetInt("MoneyCost", 50);
         SpeedCost = PlayerPrefs.GetInt("SpeedCost", 50);
