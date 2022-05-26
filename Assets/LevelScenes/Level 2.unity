@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformControllerList:
-  - {fileID: 1939774643}
   - {fileID: 1483370431}
+  - {fileID: 1939774643}
   - {fileID: 69436268}
   platformMoveDelayTime: 1
 --- !u!4 &214380330

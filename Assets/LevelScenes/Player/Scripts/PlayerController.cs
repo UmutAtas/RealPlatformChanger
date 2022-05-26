@@ -6,6 +6,8 @@ public class PlayerController : SingletonPersistent<PlayerController>
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private CinemachineDollyCart _dollyCart;
 
+    public bool isLevelEnd;
+
     private void Start()
     {
         _dollyCart.enabled = false;
@@ -27,14 +29,19 @@ public class PlayerController : SingletonPersistent<PlayerController>
 
     private void MovePlayerAnimation()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isLevelEnd)
         {
             playerAnimator.SetBool("isTap", true);
             _dollyCart.enabled = true;
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && !isLevelEnd)
         {
             playerAnimator.SetBool("isTap", false);
+            _dollyCart.enabled = false;
+        }
+        if (isLevelEnd)
+        {
+            playerAnimator.SetBool("isLevelEnd", true);
             _dollyCart.enabled = false;
         }
     }
