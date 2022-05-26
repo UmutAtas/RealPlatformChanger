@@ -9,8 +9,8 @@ public class UpgradeManager : Singleton<UpgradeManager>
 {
     public int moneyAmount;
 
-    [SerializeField] private int newMoneyAmount;
-    [SerializeField] private float newSpeed, newStamina;
+    [SerializeField] private int moneyUpgradeAmount;
+    [SerializeField] private float speedUpgradeAmount, staminaUpgradeAmount;
 
     [SerializeField] private List<int> moneyUpgradePrice = new List<int>();
     [SerializeField] private List<int> staminaUpgradePrice = new List<int>();
@@ -19,13 +19,10 @@ public class UpgradeManager : Singleton<UpgradeManager>
     [SerializeField]
     private TextMeshProUGUI moneyLevelTxt, staminaLevelTxt, speedLevelTxt, moneyPriceTxt, staminaPriceTxt, speedPriceTxt;
 
-    [SerializeField] private List<Image> moneyUpgradeImages = new List<Image>();
-    [SerializeField] private List<Image> staminaUpgradeImages = new List<Image>();
-    [SerializeField] private List<Image> speedUpgradeImages = new List<Image>();
-
     private int moneyLevel = 1, staminaLevel = 1, speedLevel = 1;
     private void Start()
     {
+        // getint("name" , defaultvalue)
         if (!PlayerPrefs.HasKey("MoneyAmount"))
             PlayerPrefs.SetInt("MoneyAmount", moneyAmount);
         moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
@@ -53,7 +50,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
     public void MoneyUpgradeButton()
     {
         var currentMoney = PlayerPrefs.GetInt("MoneyAmount");
-        PlayerPrefs.SetInt("MoneyAmount", currentMoney + newMoneyAmount);
+        PlayerPrefs.SetInt("MoneyAmount", currentMoney + moneyUpgradeAmount);
         moneyAmount = PlayerPrefs.GetInt("MoneyAmount");
         var currentMoneyLevel = PlayerPrefs.GetInt("MoneyLevel");
         PlayerPrefs.SetInt("MoneyLevel", currentMoneyLevel + 1);
@@ -64,7 +61,7 @@ public class UpgradeManager : Singleton<UpgradeManager>
     public void StaminaUpgradeButton()
     {
         var currentStamina = PlayerPrefs.GetFloat("Stamina");
-        PlayerPrefs.SetFloat("Stamina", currentStamina + newStamina);
+        PlayerPrefs.SetFloat("Stamina", currentStamina + staminaUpgradeAmount);
         PlayerController.Instance.SetPlayerStamina();
         var currentStaminaLevel = PlayerPrefs.GetInt("StaminaLevel");
         PlayerPrefs.SetInt("StaminaLevel", currentStaminaLevel + 1);
@@ -74,13 +71,13 @@ public class UpgradeManager : Singleton<UpgradeManager>
     
     public void SpeedUpgradeButton()
     {
-        if ( PlayerPrefs.GetInt("Coin") < moneyUpgradePrice[0])
-        {
-            return;
-        }
+       //if ( PlayerPrefs.GetInt("Coin") < moneyUpgradePrice[0])
+       //{
+       //    return;
+       //}
        
         var currentSpeed = PlayerPrefs.GetFloat("Speed");
-        PlayerPrefs.SetFloat("Speed", currentSpeed + newSpeed);
+        PlayerPrefs.SetFloat("Speed", currentSpeed + speedUpgradeAmount);
         PlayerController.Instance.SetPlayerSpeed();
         var currentSpeedLevel = PlayerPrefs.GetInt("SpeedLevel");
         PlayerPrefs.SetInt("SpeedLevel", currentSpeedLevel + 1);
@@ -98,10 +95,5 @@ public class UpgradeManager : Singleton<UpgradeManager>
     {
         priceIndex = PlayerPrefs.GetInt(prefName);
         priceText.text = listToGet[priceIndex - 1].ToString();
-    }
-
-    private void ButtonColors()
-    {
-        
     }
 }

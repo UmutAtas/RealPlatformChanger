@@ -1038,6 +1038,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 812165560244753502, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1642989890231353914, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 37ba08bed9155cc45b070732eb50e2e0, type: 2}
     - target: {fileID: 3575820319203091502, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_Avatar
       value: 
