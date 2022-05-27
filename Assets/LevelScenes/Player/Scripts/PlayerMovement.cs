@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AmplifyShaderEditor;
+using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
 
@@ -28,9 +29,15 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject ragDoll;
 
     [SerializeField] private GameObject sweatParticle;
+
+    [SerializeField] private Vector3 sweatScale;
+    [SerializeField] private float breathingTime;
+    private Vector3 _startScale;
+    private bool canScale = true;
     private void Awake()
     {
         playerMat = playerShader.GetComponent<SkinnedMeshRenderer>().material;
+        _startScale = Vector3.one;
     }
 
     private void Start()
@@ -113,8 +120,23 @@ public class PlayerMovement : MonoBehaviour
     void GetSweatParticle()
     {
         if (BM.Stamina <= decreaseSpeedThreshold)
+        {
             sweatParticle.SetActive(true);
-        else 
+            if (canScale)
+            {
+                canScale = false;
+                transform.DOScale(sweatScale, breathingTime).OnComplete(() =>
+                {
+                    transform.DOScale(_startScale, breathingTime).OnComplete(() =>
+                    {
+                        canScale = true;
+                    });
+                });
+            }
+        }
+        else
+        {
             sweatParticle.SetActive(false);
+        }
     }
 }
