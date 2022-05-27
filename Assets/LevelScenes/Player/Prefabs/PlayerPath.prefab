@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneySpawnDistance: 1.4
-  particleToSpawn: {fileID: 2332006336939640779, guid: 6ca4c342549aa1e4a9459aae56b239dd, type: 3}
+  particleToSpawn: {fileID: 2611141519853499864, guid: fd49c283d8635de479634edfc9b87a4c, type: 3}
   moneySpawnOffset: {x: 0.27, y: 0.52, z: -0.24}
   moneyParent: {fileID: 0}
 --- !u!1001 &4438156577753868203

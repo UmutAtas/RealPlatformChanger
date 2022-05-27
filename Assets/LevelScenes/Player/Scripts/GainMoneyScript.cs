@@ -9,19 +9,13 @@ using UnityEngine;
 public class GainMoneyScript : MonoBehaviour
 {
     [SerializeField] private TextMeshPro moneyText;
-    [SerializeField] private float colorAlphaTime;
+    [SerializeField] private float particleLifeTime;
     [SerializeField] private float upwardsMod;
 
     private void Start()
     {
         GetMoneyAmount();
         MoneyAnimation();
-    }
-
-    private void Update()
-    {
-        transform.eulerAngles = Vector3.zero;
-        transform.localEulerAngles = Vector3.zero;
     }
 
     private void GetMoneyAmount()
@@ -33,8 +27,8 @@ public class GainMoneyScript : MonoBehaviour
     {
         var color = moneyText.color;
         color.a = 0;
-        moneyText.DOColor(color, colorAlphaTime).SetEase(Ease.InCubic);
-        transform.DOLocalMove(transform.localPosition + (Vector3.up * upwardsMod), 1f).OnComplete(() =>
+        moneyText.DOColor(color, particleLifeTime).SetEase(Ease.InCubic);
+        transform.DOLocalMove(transform.localPosition + (Vector3.up * upwardsMod), particleLifeTime).OnComplete(() =>
         {
             Destroy(gameObject);
         });
