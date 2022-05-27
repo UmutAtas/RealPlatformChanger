@@ -2147,8 +2147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoneyUpgrade: 2
-  SpeedUpgrade: 0.5
-  StaminaUpgrade: 8
+  SpeedUpgrade: 0.1
+  StaminaUpgrade: 5
   disabledAlpha: 0.5
   Speed: 0
   Stamina: 0
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   moneyPriceTxt: {fileID: 327996090}
   staminaPriceTxt: {fileID: 1478778011}
   speedPriceTxt: {fileID: 1659943724}
-  upgradeParticle: {fileID: 2447134664577434119, guid: d59051e20c7276c4c90736aa8f072e2b, type: 3}
+  upgradeParticle: {fileID: 4202573269907893730, guid: 4873c4ebce0678747bce40c1fe52c1f2, type: 3}
   upgradeParent: {fileID: 503873437}
 --- !u!1 &1856172504
 GameObject:
