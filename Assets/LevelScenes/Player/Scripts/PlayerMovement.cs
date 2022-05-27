@@ -27,14 +27,15 @@ public class PlayerMovement : MonoBehaviour
     private ButtonManager BM;
 
     [SerializeField] private GameObject ragDoll;
+    [SerializeField] private GameObject playerParent;
 
     [SerializeField] private GameObject sweatParticle;
-
     [SerializeField] private Transform sweatScaleTransform;
     [SerializeField] private float sweatScale;
     [SerializeField] private float breathingTime;
     private Vector3 _startScale;
     private bool canScale = true;
+    
     private void Awake()
     {
         playerMat = playerShader.GetComponent<SkinnedMeshRenderer>().material;
@@ -105,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Lose()
     {
-        gameObject.SetActive(false);
+        playerParent.SetActive(false);
         Instantiate(ragDoll, transform.position, Quaternion.identity);
     }
 
