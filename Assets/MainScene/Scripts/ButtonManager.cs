@@ -147,7 +147,8 @@ public class ButtonManager : Singleton<ButtonManager>
         MoneyCost += MoneyCost/MoneyLevel;
         MoneyLevel += 1;
         MoneyAmount += (int)MoneyUpgrade;
-        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),
+            Quaternion.Euler(new Vector3(-90, 0, 0)), upgradeParent);
         upgradeParticleList.Add(particle);
     }
     
@@ -161,7 +162,8 @@ public class ButtonManager : Singleton<ButtonManager>
         PlayerPrefs.SetFloat("Speed",PlayerPrefs.GetFloat("Speed",1.3f)+SpeedUpgrade);
         Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         PlayerMovement.baseSpeed = Speed;
-        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),
+            Quaternion.Euler(new Vector3(-90, 0, 0)), upgradeParent);
         upgradeParticleList.Add(particle);
     }
     
@@ -175,7 +177,8 @@ public class ButtonManager : Singleton<ButtonManager>
         PlayerPrefs.SetFloat("Stamina", PlayerPrefs.GetFloat("Stamina", 100) + StaminaUpgrade);
         Stamina = PlayerPrefs.GetFloat("Stamina", 100);
         PlayerMovement.maxStamina = Stamina;
-        var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
+        var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),
+            Quaternion.Euler(new Vector3(-90, 0, 0)), upgradeParent);
         upgradeParticleList.Add(particle);
     }
 }
