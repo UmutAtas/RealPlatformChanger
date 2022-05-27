@@ -158,7 +158,9 @@ public class ButtonManager : Singleton<ButtonManager>
         UIManager.Instance.SetCoin(-SpeedCost);
         SpeedCost += SpeedCost/SpeedLevel;
         SpeedLevel += 1;
-        PlayerPrefs.SetFloat("Speed",PlayerPrefs.GetFloat("Speed")+SpeedUpgrade);
+        PlayerPrefs.SetFloat("Speed",PlayerPrefs.GetFloat("Speed",1.3f)+SpeedUpgrade);
+        Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
+        PlayerMovement.baseSpeed = Speed;
         var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
         upgradeParticleList.Add(particle);
     }
@@ -170,7 +172,9 @@ public class ButtonManager : Singleton<ButtonManager>
         UIManager.Instance.SetCoin(-StaminaCost);
         StaminaCost += (StaminaCost / StaminaLevel);
         StaminaLevel += 1;
-        PlayerPrefs.SetFloat("Stamina",PlayerPrefs.GetFloat("Stamina")+StaminaUpgrade);
+        PlayerPrefs.SetFloat("Stamina", PlayerPrefs.GetFloat("Stamina", 100) + StaminaUpgrade);
+        Stamina = PlayerPrefs.GetFloat("Stamina", 100);
+        PlayerMovement.maxStamina = Stamina;
         var particle = Instantiate(upgradeParticle, upgradeParent.position, Quaternion.identity, upgradeParent);
         upgradeParticleList.Add(particle);
     }

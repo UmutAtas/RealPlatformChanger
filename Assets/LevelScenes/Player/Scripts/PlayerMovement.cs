@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AmplifyShaderEditor;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,8 +13,8 @@ public class PlayerMovement : MonoBehaviour
         increaseSpeed,
         decreaseSpeedThreshold;
     
-    [NonSerialized] public float baseSpeed;
-    [NonSerialized] public float maxStamina;
+    [NonSerialized] public static float baseSpeed;
+    [NonSerialized] public static float maxStamina;
 
     private bool _running;
 
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         baseSpeed = BM.Speed;
         fillAmount = 0f;
     }
-
+    
     void Update()
     {
         if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
@@ -60,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         BM.Stamina -= Time.deltaTime * decreaseStamina;
         if (BM.Stamina <= decreaseSpeedThreshold)
         {
-            if (BM.Speed > BM.Speed * 0.75f)
+            if (BM.Speed > baseSpeed * 0.75f)
             {
                 BM.Speed -= Time.deltaTime * decreaseSpeed;
             }

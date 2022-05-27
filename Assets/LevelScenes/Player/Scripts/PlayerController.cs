@@ -43,6 +43,7 @@ public class PlayerController : SingletonPersistent<PlayerController>
         {
             playerAnimator.SetBool("isLevelEnd", true);
             _dollyCart.enabled = false;
+            transform.LookAt(Camera.main.transform);
         }
     }
 }
