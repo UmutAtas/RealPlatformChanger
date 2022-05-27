@@ -112,6 +112,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 516742327649370401, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 516742327649370401, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 731359286667759322, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -201,6 +209,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7356868791375463183, guid: a8d43e86c0f58e04f8566bf658881592, type: 3}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: sweatScale
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: playerShader
       value: 
       objectReference: {fileID: 5351930535402032434}
@@ -218,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: breathingTime
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: decreaseSpeed
@@ -244,6 +256,10 @@ PrefabInstance:
       propertyPath: changeFillAmount
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+      propertyPath: sweatScaleTransform
+      value: 
+      objectReference: {fileID: 4232444169075173002}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: decreaseSpeedThreshold
       value: 60
@@ -439,6 +455,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa7df3198927d74e988e0bb91705e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &4232444169075173002 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 516742327649370401, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
+  m_PrefabInstance: {fileID: 4438156577753868203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5351930535402032434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8634138893553330841, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}

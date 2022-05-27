@@ -184,5 +184,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 7480134141466945105}
-  particleLifeTime: 0.4
-  upwardsMod: 0.4
+  particleLifeTime: 0.8
+  upwardsMod: 0.2

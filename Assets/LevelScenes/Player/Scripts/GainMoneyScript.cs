@@ -20,7 +20,7 @@ public class GainMoneyScript : MonoBehaviour
 
     private void GetMoneyAmount()
     {
-        moneyText.text = ButtonManager.Instance.MoneyAmount.ToString() + ".0";
+        moneyText.text = "+ " + ButtonManager.Instance.MoneyAmount.ToString() + ".0" + "   $";
     }
 
     private void MoneyAnimation()

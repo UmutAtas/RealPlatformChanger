@@ -30,7 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private GameObject sweatParticle;
 
-    [SerializeField] private Vector3 sweatScale;
+    [SerializeField] private Transform sweatScaleTransform;
+    [SerializeField] private float sweatScale;
     [SerializeField] private float breathingTime;
     private Vector3 _startScale;
     private bool canScale = true;
@@ -96,6 +97,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
+    [Button()]
+    public void GetMoney()
+    {
+        UIManager.Instance.SetCoin(1000);
+    }
+    
     void Lose()
     {
         gameObject.SetActive(false);
@@ -125,9 +132,9 @@ public class PlayerMovement : MonoBehaviour
             if (canScale)
             {
                 canScale = false;
-                transform.DOScale(sweatScale, breathingTime).OnComplete(() =>
+                sweatScaleTransform.DOScale(Vector3.one * sweatScale, breathingTime).OnComplete(() =>
                 {
-                    transform.DOScale(_startScale, breathingTime).OnComplete(() =>
+                    sweatScaleTransform.DOScale(_startScale, breathingTime).OnComplete(() =>
                     {
                         canScale = true;
                     });
