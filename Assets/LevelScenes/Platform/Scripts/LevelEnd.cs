@@ -13,7 +13,7 @@ public class LevelEnd : MonoBehaviour
         {
             transform.GetChild(0).gameObject.SetActive(true);
             PlayerController.Instance.isLevelEnd = true;
-            StartCoroutine(GameFinishRoutine());
+            StartCoroutine(GameFinishRoutine());    
         }
     }
 

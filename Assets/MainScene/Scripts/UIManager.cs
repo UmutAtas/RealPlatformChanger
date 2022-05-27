@@ -1,3 +1,5 @@
+using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +12,10 @@ public class UIManager : Singleton<UIManager>
     GameObject m_Settings;
     [HideInInspector]
     public int m_Coin;
+
+    [SerializeField] private Transform moneyImageTransform;
+    [SerializeField] private float moneyImageScaleDuration;
+
     void Start()
     {
         m_LevelText = InGameP.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -74,4 +80,12 @@ public class UIManager : Singleton<UIManager>
         m_CoinText.text = m_Coin.ToString();
         SetLevel(0);
     } // Add or Remove Coin
+
+    public void ChangeMoneyImageScale()
+    {
+        moneyImageTransform.DOScale(new Vector3(1.1f, 1.1f, 1.1f), moneyImageScaleDuration).OnComplete(() =>
+        {
+            moneyImageTransform.DOScale(new Vector3(1f, 1f, 1f), moneyImageScaleDuration);
+        });
+    }
 }

@@ -1418,6 +1418,8 @@ MonoBehaviour:
   TapticOn: {fileID: 21300000, guid: eaf1171167b74814492b2f88b58681cf, type: 3}
   TapticOff: {fileID: 21300000, guid: d58827e9282ef4943aae90d2db46c1af, type: 3}
   m_Coin: 0
+  moneyImageTransform: {fileID: 1474538166}
+  moneyImageScaleDuration: 0.1
 --- !u!224 &1193100759 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 790871450469926571, guid: 5b9ffc2b8b1ceb644adaf95b2afb94b5, type: 3}
@@ -2148,6 +2150,8 @@ MonoBehaviour:
   SpeedUpgrade: 0.5
   StaminaUpgrade: 8
   disabledAlpha: 0.5
+  Speed: 0
+  Stamina: 0
   moneyCanvasGroup: {fileID: 2097433013}
   staminaCanvasGroup: {fileID: 1193100763}
   speedCanvasGroup: {fileID: 234840893}
