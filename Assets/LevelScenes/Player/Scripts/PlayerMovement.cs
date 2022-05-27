@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     private ButtonManager BM;
 
     [SerializeField] private GameObject ragDoll;
+
+    [SerializeField] private GameObject sweatParticle;
     private void Awake()
     {
         playerMat = playerShader.GetComponent<SkinnedMeshRenderer>().material;
@@ -53,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
                 _running = false;
             PressUp();
             GetFill();
+            GetSweatParticle();
         }
     }
 
@@ -70,19 +73,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void Lose()
-    {
-       gameObject.SetActive(false);
-       Instantiate(ragDoll, transform.position, Quaternion.identity);
-    }
-
-    void GetFill()
-    {
-        var fill = BM.Stamina / maxStamina;
-        fillAmount = 1f - fill;
-        playerMat.SetFloat("_Fill", fillAmount);
-    }
-    
     void PressUp()
     {
         if (!_running && BM.Stamina <= maxStamina)
@@ -97,5 +87,34 @@ public class PlayerMovement : MonoBehaviour
                 BM.Speed += Time.deltaTime * increaseSpeed;
             }
         }
+    }
+    
+    void Lose()
+    {
+        gameObject.SetActive(false);
+        Instantiate(ragDoll, transform.position, Quaternion.identity);
+    }
+
+    void GetFill()
+    {
+        if (PlayerController.Instance.isLevelEnd)
+        {
+            fillAmount = 0;
+        }
+        else
+        {
+            var fill = BM.Stamina / maxStamina;
+            fillAmount = 1f - fill;
+        }
+
+        playerMat.SetFloat("_Fill", fillAmount);
+    }
+
+    void GetSweatParticle()
+    {
+        if (BM.Stamina <= decreaseSpeedThreshold)
+            sweatParticle.SetActive(true);
+        else 
+            sweatParticle.SetActive(false);
     }
 }
