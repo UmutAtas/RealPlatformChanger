@@ -1162,18 +1162,6 @@ PrefabInstance:
       propertyPath: moneyParent
       value: 
       objectReference: {fileID: 1261785040}
-    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: particleToSpawn
-      value: 
-      objectReference: {fileID: 2611141519853499864, guid: fd49c283d8635de479634edfc9b87a4c, type: 3}
-    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: moneySpawnOffset.y
-      value: 0.89
-      objectReference: {fileID: 0}
-    - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: moneySpawnOffset.z
-      value: -0.62
-      objectReference: {fileID: 0}
     - target: {fileID: 4982050698281890309, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: m_Name
       value: PlayerPath

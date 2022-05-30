@@ -19492,7 +19492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: maxStaminaDecreaseAmount
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5310260447698116996, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: m_Layer
