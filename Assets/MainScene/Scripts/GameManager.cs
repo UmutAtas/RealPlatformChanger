@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
@@ -6,6 +7,9 @@ public class GameManager : Singleton<GameManager>
     public float CountDown = 2f;
     int asyncSceneIndex = 2;
     public bool taptic = true;
+    
+    [SerializeField] private TextMeshProUGUI rewardText;
+    private bool finishPanel;
     
     #region GameState
     public enum GAMESTATE
@@ -49,6 +53,7 @@ public class GameManager : Singleton<GameManager>
                 GameOver();
                 break;
         } 
+        
         //if (Input.anyKeyDown && Gamestate == GAMESTATE.Start)
           // Gamestate = GAMESTATE.Ingame;
     }
@@ -67,6 +72,7 @@ public class GameManager : Singleton<GameManager>
     void GameFinish()
     {
         CountDown -= Time.deltaTime;
+        GetRewardMoneyAmount();
     }
     void GameOver()
     {
@@ -79,6 +85,7 @@ public class GameManager : Singleton<GameManager>
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
         DestroyParticles();
+        finishPanel = false;
     }
     public void NextLevelButton()
     {
@@ -103,6 +110,7 @@ public class GameManager : Singleton<GameManager>
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
         DestroyParticles();
+        finishPanel = false;
     }
 
     public void StartInGame()
@@ -117,6 +125,18 @@ public class GameManager : Singleton<GameManager>
             Destroy(particle);
         }
         ButtonManager.Instance.upgradeParticleList.Clear();
+    }
+
+    private void GetRewardMoneyAmount()
+    {
+        if (!finishPanel)
+        {
+            var rewardAmount = Random.Range(PlayerPrefs.GetInt("minNextLevelRewardAmount", 50),
+                PlayerPrefs.GetInt("maxNextLevelRewardAmount", 100));
+            rewardText.text = "+ " + rewardAmount;
+            UIManager.Instance.SetCoin(rewardAmount);
+            finishPanel = true;
+        }
     }
 
     #endregion

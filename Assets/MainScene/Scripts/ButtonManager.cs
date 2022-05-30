@@ -147,6 +147,8 @@ public class ButtonManager : Singleton<ButtonManager>
         MoneyCost += MoneyCost/MoneyLevel;
         MoneyLevel += 1;
         MoneyAmount += (int)MoneyUpgrade;
+        PlayerPrefs.SetInt("minNextLevelRewardAmount", PlayerPrefs.GetInt("minNextLevelRewardAmount", 50) + 10);
+        PlayerPrefs.SetInt("maxNextLevelRewardAmount", PlayerPrefs.GetInt("maxNextLevelRewardAmount", 100) + 10);
         var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),
             Quaternion.Euler(new Vector3(-90, 0, 0)), upgradeParent);
         upgradeParticleList.Add(particle);
