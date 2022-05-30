@@ -54,7 +54,6 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
-        print(maxStaminaToDecrease);
         if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
         {
             if (Input.GetMouseButtonDown(0))
@@ -126,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
 
     void GetSweatParticle()
     {
-        if (BM.Stamina <= decreaseSpeedThreshold)
+        if (BM.Stamina <= decreaseSpeedThreshold && GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
         {
             sweatParticle.SetActive(true);
             if (canScale)
