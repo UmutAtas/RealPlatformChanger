@@ -1,9 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using AmplifyShaderEditor;
 using DG.Tweening;
-using NaughtyAttributes;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
