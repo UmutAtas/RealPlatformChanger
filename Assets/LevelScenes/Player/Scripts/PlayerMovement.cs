@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     
     [NonSerialized] public static float baseSpeed;
     [NonSerialized] public static float maxStamina;
-    public static float maxStaminaToDecrease;
+    [NonSerialized] public static float maxStaminaToDecrease;
     [SerializeField] private float maxStaminaDecreaseAmount;
     private bool maxStaminaCanDecrease;
 
@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject playerParent;
 
     [SerializeField] private GameObject sweatParticle;
+    [NonSerialized] public static bool canSweat = true;
     [SerializeField] private Transform sweatScaleTransform;
     [SerializeField] private float sweatScale;
     [SerializeField] private float breathingTime;
@@ -79,9 +80,7 @@ public class PlayerMovement : MonoBehaviour
         if (BM.Stamina <= decreaseSpeedThreshold)
         {
             if (BM.Speed > baseSpeed * 0.75f)
-            {
                 BM.Speed -= Time.deltaTime * decreaseSpeed;
-            }
             if (BM.Stamina <= 0)
                 Lose();
         }
@@ -93,13 +92,9 @@ public class PlayerMovement : MonoBehaviour
         {
             BM.Stamina += Time.deltaTime * increaseStamina;
             if (BM.Stamina >= decreaseSpeedThreshold)
-            {
                 BM.Speed = baseSpeed;
-            }
             else if (BM.Stamina <= 75 && BM.Speed <= baseSpeed)
-            {
                 BM.Speed += Time.deltaTime * increaseSpeed;
-            }
         }
     }
     
@@ -125,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
 
     void GetSweatParticle()
     {
-        if (BM.Stamina <= decreaseSpeedThreshold && GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
+        if (BM.Stamina <= decreaseSpeedThreshold && canSweat)
         {
             sweatParticle.SetActive(true);
             if (canScale)
@@ -141,8 +136,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         else
-        {
             sweatParticle.SetActive(false);
-        }
     }
 }
