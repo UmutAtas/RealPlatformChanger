@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : Singleton<GameManager>
 {
     public float CountDown = 2f;
-    int asyncSceneIndex = 1;
+    int asyncSceneIndex = 2;
     public bool taptic = true;
     
     #region GameState
@@ -85,7 +85,7 @@ public class GameManager : Singleton<GameManager>
         if (SceneManager.sceneCountInBuildSettings == asyncSceneIndex + 1)
         {
             SceneManager.UnloadSceneAsync(asyncSceneIndex);
-            asyncSceneIndex = 1;
+            asyncSceneIndex = 2;
             SceneManager.LoadSceneAsync(asyncSceneIndex, LoadSceneMode.Additive);
         }
         else
