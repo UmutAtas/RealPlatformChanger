@@ -34,6 +34,8 @@ public class MoneySpawner : MonoBehaviour
             _position = currentPos;
             UIManager.Instance.SetCoin(ButtonManager.Instance.MoneyAmount);
             UIManager.Instance.ChangeMoneyImageScale();
+            if (GameManager.Instance.taptic)
+                Taptic.Medium();
         }
     }
 }

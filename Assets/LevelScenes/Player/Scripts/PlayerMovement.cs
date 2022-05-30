@@ -98,16 +98,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-    [Button()]
-    public void GetMoney()
-    {
-        UIManager.Instance.SetCoin(1000);
-    }
-    
     void Lose()
     {
         playerParent.SetActive(false);
         Instantiate(ragDoll, transform.position, Quaternion.identity);
+        if (GameManager.Instance.taptic)
+            Taptic.Heavy();
     }
 
     void GetFill()
