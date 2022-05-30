@@ -12,6 +12,7 @@ public class LevelEnd : MonoBehaviour
         if (other.gameObject.layer == 3)
         {
             PlayerMovement.canSweat = false;
+            LevelEndCameraMove.cameraCanMove = true;
             transform.GetChild(0).gameObject.SetActive(true);
             PlayerController.Instance.isLevelEnd = true;
             StartCoroutine(GameFinishRoutine());    
