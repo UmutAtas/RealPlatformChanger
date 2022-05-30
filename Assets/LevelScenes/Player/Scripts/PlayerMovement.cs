@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     
     [NonSerialized] public static float baseSpeed;
     [NonSerialized] public static float maxStamina;
+    public static float maxStaminaToDecrease;
+    [SerializeField] private float maxStaminaDecreaseAmount;
+    private bool maxStaminaCanDecrease;
 
     private bool _running;
 
@@ -44,12 +47,14 @@ public class PlayerMovement : MonoBehaviour
         BM.Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         BM.Stamina = PlayerPrefs.GetFloat("Stamina", 100);
         maxStamina =BM.Stamina;
+        maxStaminaToDecrease = maxStamina;
         baseSpeed = BM.Speed;
         fillAmount = 0f;
     }
     
     void Update()
     {
+        print(maxStaminaToDecrease);
         if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
         {
             if (Input.GetMouseButtonDown(0))
@@ -57,7 +62,12 @@ public class PlayerMovement : MonoBehaviour
             if(Input.GetMouseButton(0))
                 PressDown();
             if (Input.GetMouseButtonUp(0))
+            {
                 _running = false;
+                if (maxStaminaCanDecrease)
+                    maxStaminaToDecrease -= maxStaminaDecreaseAmount;
+                maxStaminaCanDecrease = true;
+            }
             PressUp();
             GetFill();
             GetSweatParticle();
@@ -80,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PressUp()
     {
-        if (!_running && BM.Stamina <= maxStamina)
+        if (!_running && BM.Stamina <= maxStaminaToDecrease)
         {
             BM.Stamina += Time.deltaTime * increaseStamina;
             if (BM.Stamina >= decreaseSpeedThreshold)
@@ -105,15 +115,12 @@ public class PlayerMovement : MonoBehaviour
     void GetFill()
     {
         if (PlayerController.Instance.isLevelEnd)
-        {
             fillAmount = 0;
-        }
         else
         {
             var fill = BM.Stamina / maxStamina;
             fillAmount = 1f - fill;
         }
-
         playerMat.SetFloat("_Fill", fillAmount);
     }
 
