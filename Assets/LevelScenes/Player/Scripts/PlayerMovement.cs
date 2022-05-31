@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        canSweat = true;
         BM = ButtonManager.Instance;
         BM.Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         BM.Stamina = PlayerPrefs.GetFloat("Stamina", 100);
