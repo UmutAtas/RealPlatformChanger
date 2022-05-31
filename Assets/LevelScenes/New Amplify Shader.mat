@@ -34,5 +34,5 @@ Material:
     - _ASEOutlineColor: {r: 0, g: 0, b: 0, a: 0}
     - _FillColor: {r: 1.216786, g: 0.095559105, b: 0, a: 1}
     - _SideColor: {r: 1, g: 0, b: 0.7463417, a: 1}
-    - _Topcolor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+    - _Topcolor: {r: 0.7264151, g: 0.7264151, b: 0.7264151, a: 1}
   m_BuildTextureStacks: []
