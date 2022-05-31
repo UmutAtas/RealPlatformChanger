@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="09db6df5-f0a6-4916-a819-ca0d2473b1ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RealPlatformChanger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RealPlatformChanger/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Materials/ShortWay 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Materials/ShortWay 3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Materials/ShortWay 4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Materials/ShortWay 4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Materials/road 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Materials/road 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Materials/road 2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Materials/road 2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelScenes/Player/Prefabs/PlayerPath.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelScenes/Player/Prefabs/PlayerPath.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/Scripts/ButtonManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/Scripts/ButtonManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +106,7 @@
       <workItem from="1653513708127" duration="809000" />
       <workItem from="1653554909104" duration="2009000" />
       <workItem from="1653897956848" duration="1301000" />
+      <workItem from="1653999894705" duration="2924000" />
     </task>
     <servers />
   </component>

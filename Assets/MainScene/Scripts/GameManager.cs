@@ -1,3 +1,4 @@
+using Happy.Analytics;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
@@ -35,6 +36,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         Gamestate = GAMESTATE.Start;
+        HappyAnalytics.LevelStartEvent(PlayerPrefs.GetInt("Level", 1));
     }
     void Update()
     {
@@ -82,6 +84,7 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.UnloadSceneAsync(asyncSceneIndex);
         SceneManager.LoadSceneAsync(asyncSceneIndex, LoadSceneMode.Additive);
+        HappyAnalytics.LevelFailEvent(PlayerPrefs.GetInt("Level", 1));
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
         DestroyParticles();
@@ -107,6 +110,7 @@ public class GameManager : Singleton<GameManager>
         }
         UIManager.Instance.SetLevel(1);
         PlayerPrefs.SetInt("SaveScene",asyncSceneIndex);
+        HappyAnalytics.LevelCompleteEvent(PlayerPrefs.GetInt("Level", 1));
         Gamestate = GAMESTATE.Start;
         CountDown = 2;
         DestroyParticles();
@@ -131,8 +135,8 @@ public class GameManager : Singleton<GameManager>
     {
         if (!finishPanel)
         {
-            var rewardAmount = Random.Range(PlayerPrefs.GetInt("minNextLevelRewardAmount", 50),
-                PlayerPrefs.GetInt("maxNextLevelRewardAmount", 100));
+            var rewardAmount = Random.Range(PlayerPrefs.GetInt("minNextLevelRewardAmount", 25),
+                PlayerPrefs.GetInt("maxNextLevelRewardAmount", 75));
             rewardText.text = "+ " + rewardAmount;
             UIManager.Instance.SetCoin(rewardAmount);
             finishPanel = true;
