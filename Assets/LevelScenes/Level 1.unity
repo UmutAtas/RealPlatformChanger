@@ -572,10 +572,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 752873161335303616, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
-      propertyPath: maxStaminaDecreaseAmount
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 4982050697444924636, guid: 1703698695846eb4a81c92b3bc91d8d8, type: 3}
       propertyPath: moneyParent
       value: 

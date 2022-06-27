@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float decreaseStamina,
+        decreaseStaminaOnMouseUp,
         increaseStamina,
         decreaseSpeed,
         increaseSpeed,
@@ -12,9 +13,6 @@ public class PlayerMovement : MonoBehaviour
     
     [NonSerialized] public static float baseSpeed;
     [NonSerialized] public static float maxStamina;
-    [NonSerialized] public static float maxStaminaToDecrease;
-    [SerializeField] private float maxStaminaDecreaseAmount;
-    private bool maxStaminaCanDecrease;
 
     private bool _running;
 
@@ -49,7 +47,6 @@ public class PlayerMovement : MonoBehaviour
         BM.Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         BM.Stamina = PlayerPrefs.GetFloat("Stamina", 100);
         maxStamina =BM.Stamina;
-        maxStaminaToDecrease = maxStamina;
         baseSpeed = BM.Speed;
         fillAmount = 0f;
     }
@@ -65,9 +62,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 _running = false;
-                if (maxStaminaCanDecrease)
-                    maxStaminaToDecrease -= maxStaminaDecreaseAmount;
-                maxStaminaCanDecrease = true;
+                decreaseStamina += decreaseStaminaOnMouseUp;
             }
             PressUp();
             GetFill();
@@ -89,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PressUp()
     {
-        if (!_running && BM.Stamina <= maxStaminaToDecrease)
+        if (!_running && BM.Stamina <= maxStamina)
         {
             BM.Stamina += Time.deltaTime * increaseStamina;
             if (BM.Stamina >= decreaseSpeedThreshold)
@@ -138,5 +133,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             sweatParticle.SetActive(false);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            Lose();
+        }
     }
 }
