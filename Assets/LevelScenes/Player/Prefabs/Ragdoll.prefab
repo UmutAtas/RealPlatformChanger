@@ -1473,7 +1473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitForGameOver: 2
   rb: {fileID: 325929198247903398}
-  yForce: 2000
+  yForce: 3000
 --- !u!54 &325929198247903398
 Rigidbody:
   m_ObjectHideFlags: 0

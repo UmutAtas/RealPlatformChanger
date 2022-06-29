@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1357777439758755584}
   - component: {fileID: 1357777439758755588}
   - component: {fileID: 1357777439758755589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -105,9 +105,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1357777439758755615}
   serializedVersion: 2
-  m_Mass: 50
-  m_Drag: 1
-  m_AngularDrag: 0.05
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0

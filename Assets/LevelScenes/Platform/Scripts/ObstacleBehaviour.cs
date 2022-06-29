@@ -9,14 +9,14 @@ public class ObstacleBehaviour : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    private void Start()
     {
         Turn();
     }
 
     private void Turn()
     {
-        rb.AddTorque(Vector3.up * 2);
+        rb.angularVelocity = Vector3.up * 2;
     }
 }
 
