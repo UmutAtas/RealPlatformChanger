@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float decreaseStamina,
-        decreaseStaminaOnMouseUp,
         increaseStamina,
         decreaseSpeed,
         increaseSpeed,
         decreaseSpeedThreshold;
     
-    [NonSerialized] public static float baseSpeed;
-    [NonSerialized] public static float maxStamina;
+    public static float baseSpeed;
+    public static float maxStamina; 
+    public static float decreaseStaminaOnMouseUp;
 
     private bool _running;
 
@@ -46,11 +46,14 @@ public class PlayerMovement : MonoBehaviour
         BM = ButtonManager.Instance;
         BM.Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         BM.Stamina = PlayerPrefs.GetFloat("Stamina", 100);
-        maxStamina =BM.Stamina;
+        BM.StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 2);
+        maxStamina = BM.Stamina;
         baseSpeed = BM.Speed;
+        decreaseStaminaOnMouseUp = BM.StaminaDecrease;
         fillAmount = 0f;
     }
-    
+
+    private bool firstClick = false;
     void Update()
     {
         if (GameManager.Instance.Gamestate == GameManager.GAMESTATE.Ingame)
@@ -62,7 +65,9 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonUp(0))
             {
                 _running = false;
-                decreaseStamina += decreaseStaminaOnMouseUp;
+                if (firstClick)
+                    decreaseStamina += decreaseStaminaOnMouseUp;
+                firstClick = true;
             }
             PressUp();
             GetFill();

@@ -29,9 +29,10 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/UpgradeManager.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/ObstacleBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
+      <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/ButtonManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="28qK24a42l6S4a40xLfQebSKrY3" />
@@ -98,6 +99,7 @@
       <workItem from="1653554909104" duration="2009000" />
       <workItem from="1653897956848" duration="1301000" />
       <workItem from="1653999894705" duration="2924000" />
+      <workItem from="1656504305909" duration="2025000" />
     </task>
     <servers />
   </component>

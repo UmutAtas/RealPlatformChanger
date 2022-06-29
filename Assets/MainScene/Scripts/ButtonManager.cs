@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 public class ButtonManager : Singleton<ButtonManager>
 {
-    [SerializeField]float MoneyUpgrade, SpeedUpgrade, StaminaUpgrade;
+    [SerializeField]float MoneyUpgrade, SpeedUpgrade, StaminaUpgrade , StaminaDecreaseUpgrade;
 
     private int _moneylevel,
         _speedlevel,
@@ -17,6 +17,7 @@ public class ButtonManager : Singleton<ButtonManager>
     [SerializeField] private float disabledAlpha;
     public float Speed;
     public float Stamina;
+    public float StaminaDecrease;
     public int MoneyAmount
     {
         get
@@ -177,8 +178,11 @@ public class ButtonManager : Singleton<ButtonManager>
         StaminaCost += (StaminaCost / StaminaLevel);
         StaminaLevel += 1;
         PlayerPrefs.SetFloat("Stamina", PlayerPrefs.GetFloat("Stamina", 100) + StaminaUpgrade);
+        PlayerPrefs.SetFloat("StaminaDecrease", PlayerPrefs.GetFloat("StaminaDecrease", 2) + StaminaDecreaseUpgrade);
         Stamina = PlayerPrefs.GetFloat("Stamina", 100);
+        StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 2);
         PlayerMovement.maxStamina = Stamina;
+        PlayerMovement.decreaseStaminaOnMouseUp = StaminaDecrease;
         var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),
             Quaternion.Euler(new Vector3(-90, 0, 0)), upgradeParent);
         upgradeParticleList.Add(particle);

@@ -2719,9 +2719,11 @@ MonoBehaviour:
   MoneyUpgrade: 2
   SpeedUpgrade: 0.1
   StaminaUpgrade: 5
+  StaminaDecreaseUpgrade: 0.5
   disabledAlpha: 0.5
   Speed: 0
   Stamina: 0
+  StaminaDecrease: 0
   moneyCanvasGroup: {fileID: 2097433013}
   staminaCanvasGroup: {fileID: 1193100763}
   speedCanvasGroup: {fileID: 234840893}
