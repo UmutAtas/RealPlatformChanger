@@ -30,16 +30,6 @@ public class PlatformController : MonoBehaviour
         left,
     }
     
-    private void Start()
-    {
-        //StartCoroutine(PlatformMoveDelay());
-    }
-
-    private void Update()
-    {
-        //LockPlatformPosition();
-    }
-
     private void FixedUpdate()
     {
         if (!isTap && !underPlayer && canMove)
@@ -55,28 +45,4 @@ public class PlatformController : MonoBehaviour
             platform.MoveAll();
         }
     }
-
-    //private void LockPlatformPosition()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        StopAllCoroutines();    
-    //        //isTap = true;
-    //        //canMove = false;
-    //    }
-    //    else if (Input.GetMouseButtonUp(0))
-    //    {   
-    //        //isTap = false;
-    //        StartCoroutine(PlatformMoveDelay());
-    //    }
-    //}
-
-   //private IEnumerator PlatformMoveDelay()
-   //{
-   //    for (int i = 0; i < allPlatforms.childCount; i++)
-   //    {
-   //        allPlatforms.GetChild(i).GetComponent<PlatformController>().canMove = true;
-   //        yield return new WaitForSeconds(platformMoveDelayTime);
-   //    }
-   //}
 }
