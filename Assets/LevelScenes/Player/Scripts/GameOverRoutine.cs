@@ -16,7 +16,7 @@ public class GameOverRoutine : MonoBehaviour
 
     private IEnumerator GameOverState()
     {
-        rb.AddForce(0f, yForce, 0f);
+        rb.AddForce(0f, yForce, -500);
         yield return new WaitForSeconds(waitForGameOver);
         GameManager.Instance.Gamestate = GameManager.GAMESTATE.GameOver;
         Destroy(gameObject);

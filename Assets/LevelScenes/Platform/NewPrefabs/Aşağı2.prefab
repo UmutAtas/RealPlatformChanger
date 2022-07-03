@@ -52,31 +52,31 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: -0.3}
+  - position: {x: 0, y: 0.0036090836, z: -0.3049164}
     roll: 0
-  - position: {x: 0, y: -0.049774323, z: -0.23963188}
+  - position: {x: 0, y: -0.049774323, z: -0.24369882}
     roll: 0
-  - position: {x: 0, y: -0.060257275, z: -0.17973657}
+  - position: {x: 0, y: -0.060257275, z: -0.17696881}
     roll: 0
-  - position: {x: 0, y: -0.009648091, z: -0.11762824}
+  - position: {x: 0, y: -0.009648091, z: -0.11611856}
     roll: 0
-  - position: {x: 0, y: 0.05116387, z: -0.05551991}
+  - position: {x: 0, y: 0.047580637, z: -0.05551991}
     roll: 0
-  - position: {x: 0, y: 0.06773428, z: 0.0065884218}
+  - position: {x: 0, y: 0.06439011, z: 0.0065884218}
     roll: 0
   - position: {x: 0, y: 0.041929644, z: 0.06765681}
     roll: 0
-  - position: {x: 0, y: -0.015089196, z: 0.12262827}
+  - position: {x: 0, y: -0.019331768, z: 0.12262827}
     roll: 0
-  - position: {x: 0, y: -0.058770824, z: 0.18168144}
+  - position: {x: 0, y: -0.062007416, z: 0.18168144}
     roll: 0
-  - position: {x: 0, y: -0.043405153, z: 0.25009784}
+  - position: {x: 0, y: -0.044746555, z: 0.25009784}
     roll: 0
-  - position: {x: 0, y: 0.007258785, z: 0.3052537}
+  - position: {x: 0, y: 0.0045563355, z: 0.3052537}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!54 &1550711636136317598
 Rigidbody:

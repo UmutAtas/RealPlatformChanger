@@ -26,12 +26,13 @@
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/MoneySpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformManager.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/UpgradeManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/ObstacleBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/ButtonManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/ObstacleBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/GameOverRoutine.cs" />
+      <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
@@ -100,7 +101,10 @@
       <workItem from="1653897956848" duration="1301000" />
       <workItem from="1653999894705" duration="2924000" />
       <workItem from="1656504305909" duration="2025000" />
-      <workItem from="1656585516297" duration="2299000" />
+      <workItem from="1656585516297" duration="2801000" />
+      <workItem from="1656676140737" duration="3187000" />
+      <workItem from="1656838099587" duration="784000" />
+      <workItem from="1656851300430" duration="2634000" />
     </task>
     <servers />
   </component>

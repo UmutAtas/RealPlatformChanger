@@ -52,9 +52,9 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!54 &1127031136674621265
 Rigidbody:

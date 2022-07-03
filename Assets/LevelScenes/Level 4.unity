@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.y
-      value: 0.01349145
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.z
@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.y
-      value: 0.013491449
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.z
@@ -909,7 +909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.y
-      value: 0.01349145
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.z
@@ -917,7 +917,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.y
-      value: 0.013491449
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.z
@@ -1692,7 +1692,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.y
-      value: 0.01349145
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[0].position.z
@@ -1700,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.y
-      value: 0.013491449
+      value: 0.006
       objectReference: {fileID: 0}
     - target: {fileID: 100617951383424367, guid: 7ada65812c1500d4d86f2b127c0db5a4, type: 3}
       propertyPath: m_Waypoints.Array.data[1].position.z
@@ -2154,19 +2154,19 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: -0.22}
+  - position: {x: 0.000000029802322, y: -0.0016489894, z: -0.20692459}
     roll: 0
-  - position: {x: 0, y: -0.07593291, z: -0.09621688}
+  - position: {x: 0.000000029802322, y: -0.08009824, z: -0.09973674}
     roll: 0
-  - position: {x: 0, y: -0.09239339, z: 0.02756624}
+  - position: {x: 0.000000029802322, y: -0.09789991, z: 0.02756619}
     roll: 0
-  - position: {x: 0, y: -0.05797558, z: 0.118494324}
+  - position: {x: 0.000000029802322, y: -0.057975665, z: 0.13761887}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.2006932}
+  - position: {x: 0.000000029802322, y: 0.0017506689, z: 0.19707932}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!4 &5048246106574704202
 Transform:
@@ -2389,25 +2389,25 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0.1183868, y: 0.013491451, z: -0.27}
+  - position: {x: 0.1183868, y: 0.006, z: -0.27}
     roll: 0
-  - position: {x: 0.05013417, y: 0.013491451, z: -0.17}
+  - position: {x: 0.05013417, y: 0.006, z: -0.17}
     roll: 0
-  - position: {x: -0.065360755, y: 0.013491452, z: -0.09}
+  - position: {x: -0.065360755, y: 0.006, z: -0.09}
     roll: 0
-  - position: {x: -0.123890355, y: 0.013491454, z: -0.018491019}
+  - position: {x: -0.123890355, y: 0.006, z: -0.018491019}
     roll: 0
-  - position: {x: -0.09145992, y: 0.0134914545, z: 0.05301797}
+  - position: {x: -0.09145992, y: 0.006, z: 0.05301797}
     roll: 0
-  - position: {x: -0.007345361, y: 0.0134914545, z: 0.12452697}
+  - position: {x: -0.007345361, y: 0.006, z: 0.12452697}
     roll: 0
-  - position: {x: 0.076769195, y: 0.0134914545, z: 0.19603598}
+  - position: {x: 0.076769195, y: 0.006, z: 0.19603598}
     roll: 0
-  - position: {x: 0.10342977, y: 0.0134914545, z: 0.30835482}
+  - position: {x: 0.10342977, y: 0.006, z: 0.30835482}
     roll: 0
-  - position: {x: 0, y: 0.0134914545, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!1 &7897715580179871337
 GameObject:
@@ -2513,31 +2513,31 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.015231252, z: -0.3}
+  - position: {x: 0, y: 0.015231252, z: -0.2921889}
     roll: 0
   - position: {x: 0, y: 0.06683566, z: -0.23963188}
     roll: 0
-  - position: {x: 0, y: 0.08268541, z: -0.17973657}
+  - position: {x: 0, y: 0.07397175, z: -0.17973657}
     roll: 0
-  - position: {x: 0, y: 0.036261152, z: -0.11762824}
+  - position: {x: 0, y: 0.030677862, z: -0.11762824}
     roll: 0
-  - position: {x: 0, y: -0.02936685, z: -0.05551991}
+  - position: {x: 0, y: -0.033775195, z: -0.05551991}
     roll: 0
-  - position: {x: 0, y: -0.042181578, z: 0.0065884218}
+  - position: {x: 0, y: -0.047456108, z: 0.0065884218}
     roll: 0
-  - position: {x: 0, y: -0.018708974, z: 0.06765681}
+  - position: {x: 0, y: -0.0220396, z: 0.06765681}
     roll: 0
-  - position: {x: 0, y: 0.04294547, z: 0.12262827}
+  - position: {x: 0, y: 0.03735121, z: 0.12262827}
     roll: 0
-  - position: {x: 0, y: 0.07961895, z: 0.18168144}
+  - position: {x: 0, y: 0.07700093, z: 0.18168144}
     roll: 0
-  - position: {x: 0, y: 0.06740471, z: 0.25009784}
+  - position: {x: 0, y: 0.062867604, z: 0.25009784}
     roll: 0
-  - position: {x: 0, y: 0.018570278, z: 0.3052537}
+  - position: {x: 0, y: 0.0073603094, z: 0.3052537}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!1 &8876133575133054847
 GameObject:
@@ -2641,19 +2641,19 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: -0.22}
+  - position: {x: 0.000000029802322, y: -0.0016489894, z: -0.20692459}
     roll: 0
-  - position: {x: 0, y: -0.07593291, z: -0.09621688}
+  - position: {x: 0.000000029802322, y: -0.08009824, z: -0.09973674}
     roll: 0
-  - position: {x: 0, y: -0.09239339, z: 0.02756624}
+  - position: {x: 0.000000029802322, y: -0.09789991, z: 0.02756619}
     roll: 0
-  - position: {x: 0, y: -0.05797558, z: 0.118494324}
+  - position: {x: 0.000000029802322, y: -0.057975665, z: 0.13761887}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.2006932}
+  - position: {x: 0.000000029802322, y: 0.0017506689, z: 0.19707932}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!1 &9168922233010605045
 GameObject:

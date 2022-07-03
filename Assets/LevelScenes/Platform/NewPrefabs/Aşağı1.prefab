@@ -52,19 +52,19 @@ MonoBehaviour:
     width: 0.2
   m_Looped: 0
   m_Waypoints:
-  - position: {x: 0, y: 0.013491449, z: -0.4}
+  - position: {x: 0, y: 0.006, z: -0.4}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: -0.22}
+  - position: {x: 0, y: 0.0006487891, z: -0.22}
     roll: 0
-  - position: {x: 0, y: -0.07593291, z: -0.09621688}
+  - position: {x: 0, y: -0.08051298, z: -0.09621688}
     roll: 0
-  - position: {x: 0, y: -0.09239339, z: 0.02756624}
+  - position: {x: 0, y: -0.10054108, z: 0.02756624}
     roll: 0
-  - position: {x: 0, y: -0.05797558, z: 0.118494324}
+  - position: {x: 0, y: -0.06557918, z: 0.12391528}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.2006932}
+  - position: {x: 0, y: 0.0015083104, z: 0.20730507}
     roll: 0
-  - position: {x: 0, y: 0.01349145, z: 0.4}
+  - position: {x: 0, y: 0.006, z: 0.4}
     roll: 0
 --- !u!54 &5173935323662928150
 Rigidbody:
