@@ -144,7 +144,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
-            print("girdi");
             Lose();
         }
     }
