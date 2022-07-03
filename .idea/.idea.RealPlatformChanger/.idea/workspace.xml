@@ -29,10 +29,10 @@
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/ButtonManager.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformController.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/PlatformMover.cs" />
-      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Platform/Scripts/ObstacleBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/GameOverRoutine.cs" />
       <option value="$PROJECT_DIR$/Assets/MainScene/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerPathFind.cs" />
       <option value="$PROJECT_DIR$/Assets/LevelScenes/Player/Scripts/PlayerMovement.cs" />
     </changedPaths>
   </component>
@@ -104,7 +104,7 @@
       <workItem from="1656585516297" duration="2801000" />
       <workItem from="1656676140737" duration="3187000" />
       <workItem from="1656838099587" duration="784000" />
-      <workItem from="1656851300430" duration="2634000" />
+      <workItem from="1656851300430" duration="3046000" />
     </task>
     <servers />
   </component>
