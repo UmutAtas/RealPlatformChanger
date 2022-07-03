@@ -127,7 +127,7 @@ public class ButtonManager : Singleton<ButtonManager>
         MoneyLevel = PlayerPrefs.GetInt("MoneyLevel",1);
         SpeedLevel = PlayerPrefs.GetInt("SpeedLevel", 1);
         StaminaLevel = PlayerPrefs.GetInt("StaminaLevel", 1);
-        MoneyAmount = PlayerPrefs.GetInt("MoneyAmount", 1);
+        MoneyAmount = PlayerPrefs.GetInt("MoneyAmount", 2);
     }
     private void OnDisable()
     {
@@ -180,7 +180,7 @@ public class ButtonManager : Singleton<ButtonManager>
         PlayerPrefs.SetFloat("Stamina", PlayerPrefs.GetFloat("Stamina", 100) + StaminaUpgrade);
         PlayerPrefs.SetFloat("StaminaDecrease", PlayerPrefs.GetFloat("StaminaDecrease", 2) + StaminaDecreaseUpgrade);
         Stamina = PlayerPrefs.GetFloat("Stamina", 100);
-        StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 2);
+        StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 15);
         PlayerMovement.maxStamina = Stamina;
         PlayerMovement.decreaseStaminaOnMouseUp = StaminaDecrease;
         var particle = Instantiate(upgradeParticle, upgradeParent.position + new Vector3(0f, -0.6f, -0.2f),

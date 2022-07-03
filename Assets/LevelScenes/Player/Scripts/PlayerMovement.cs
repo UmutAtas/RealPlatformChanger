@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         BM = ButtonManager.Instance;
         BM.Speed = PlayerPrefs.GetFloat("Speed", 1.3f);
         BM.Stamina = PlayerPrefs.GetFloat("Stamina", 100);
-        BM.StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 2); //basmayı bıraktığında stamina azalışını artırma.
+        BM.StaminaDecrease = PlayerPrefs.GetFloat("StaminaDecrease", 10); //basmayı bıraktığında stamina azalışını artırma.
         maxStamina = BM.Stamina;
         baseSpeed = BM.Speed;
         decreaseStaminaOnMouseUp = BM.StaminaDecrease;
