@@ -2719,7 +2719,7 @@ MonoBehaviour:
   MoneyUpgrade: 2
   SpeedUpgrade: 0.1
   StaminaUpgrade: 5
-  StaminaDecreaseUpgrade: 2
+  StaminaDecreaseUpgrade: 1
   disabledAlpha: 0.5
   Speed: 0
   Stamina: 0

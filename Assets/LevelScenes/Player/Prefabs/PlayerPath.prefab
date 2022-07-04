@@ -19476,7 +19476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: increaseStamina
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: changeFillAmount
@@ -19488,7 +19488,7 @@ PrefabInstance:
       objectReference: {fileID: 4232444169075173002}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: decreaseSpeedThreshold
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4027838481203317355, guid: 00ffcb8b03039e344b0ca2db7f1feed8, type: 3}
       propertyPath: decreaseStaminaOnMouseUp
